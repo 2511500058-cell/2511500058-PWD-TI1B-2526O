@@ -44,7 +44,19 @@
     </section>
     <section id="contact">
         <h2>Kontak saya</h2>
-        <p>Contoh form</p>
+        <form action="" method="GET">
+            <label for="txtNama">Nama:</label>
+            <input type="text" id="txtNama" name="txtNama" placeholder="Masukan nama" required autocomplete="name">
+            
+            <label for="txtEmail">Email:</label>
+            <input type="text" id="txtEmail" name="txtEmail" placeholder="Masukan email" required autocomplete="name">
+            
+            <label for="txtPesan">Pesan:</label>
+            <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan kamu..." required></textarea>
+            
+            <button type="submit">kirim</button>
+            <button type="reset">batal</button>
+        </form>
     </section>
 </main>
     <footer>
