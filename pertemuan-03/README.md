@@ -12,4 +12,5 @@ Hari ini Kamis tanggal 9 Oktober 2025, saya belajar:
   <li>membuat styling untuk selector ID #about elemen p</li>
   <li>membuat styling untuk selector ID #about elemen strong</li>
   <li>membuat styling untuk selector ID #about mode respomsif (mobile)</li>
+  <li>membuat styling HTML form dengan CSS</li>
 <ol>
