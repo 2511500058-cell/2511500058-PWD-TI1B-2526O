@@ -15,4 +15,6 @@ Hari ini Kamis tanggal 9 Oktober 2025, saya belajar:
   <li>membuat styling HTML form dengan CSS</li>
   <li>styling id section#contact
   <li>section#contact groups selector
+  <li>section#contact groups selector h2
+  <li>section#contact upgrade struktur form
 <ol>
