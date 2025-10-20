@@ -22,4 +22,5 @@ Hari ini Kamis tanggal 9 Oktober 2025, saya belajar:
   <li>section#contact styling tombol
   <li>section#contact styling warna tombol
   <li>section#contact styling label dan label>span
+  <li>section#contact styling input, textarea, button
 <ol>
