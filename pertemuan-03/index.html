@@ -45,18 +45,29 @@
       flex-shrink: 0;
     }
 
-    @media (max-width: 600px) {
-      #about p {
-        flex-direction: column;
-        align-items: flex-start;
-      }
+    #contact input,
+    #contact textarea {
+      flex: 1;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 8px;
+      color: #000;
+      font-weight: normal;
+      margin: 0;
+      box-sizing: border-box;
 
-      #about strong {
-        text-align: left;
-        padding-right: 0;
-        margin-bottom: 2px;
+      @media (max-width: 600px) {
+        #about p {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        #about strong {
+          text-align: left;
+          padding-right: 0;
+          margin-bottom: 2px;
+        }
       }
-    }
   </style>
 </head>
 
@@ -93,113 +104,125 @@
     <section id="contact">
       <h2>Kontak Saya</h2>
       <form action="" method="GET">
-      <style>
-        #contact {
-          max-width: 600px;
-          margin: 50px auto;
-          padding: 30px;
-          background-color: #f8f9fa;
-          border-radius: 10px;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-          font-family: Arial, sans-serif;
-        }
-
-        h2 {
-          text-align: center;
-          color: #007bff;
-          margin-bottom: 20px;
-          font-size: 24px;
-        }
-
-        form {
-          display: flex;
-          flex-direction: column;
-        }
-
-        label {
-          margin-bottom: 8px;
-          font-weight: bold;
-          color: #333;
-        }
-        
-        input,
-        textarea {
-          padding: 12px;
-          margin-bottom: 15px;
-          border: 1px solid #ced4da;
-          border-radius: 5px;
-          font-size: 16px;
-          transition: border-color 0.3s;
-        }
-
-        input:focus,
-        textarea:focus {
-          border-color: #007bff;
-          outline: none;
-          box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-        }
-
-        input[type="color"] {
-          width: 50px;
-          height: 50px;
-          margin-bottom: 15px;
-          border: none;
-          cursor: pointer;
-        }
-
-        textarea {
-          resize: vertical;
-          min-height: 100px;
-        }
-
-        button {
-          padding: 12px 20px;
-          background-color: #007bff;
-          color: white;
-          border: none;
-          border-radius: 5px;
-          font-size: 16px;
-          cursor: pointer;
-          transition: background-color 0.3s;
-          margin-right: 10px;
-        }
-
-        button {
-          background-color: #007bff;
-        }
-
-        button[type="reset"] {
-          background-color: #ff0000;
-        }
-
-        @media (max-width: 600px) {
+        <style>
           #contact {
-            margin: 20px;
-            padding: 20px;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-family: Arial, sans-serif;
+          }
+
+          #contact button {
+            margin-top: 10px;
+            display: inline-block;
+            padding: 10px 24px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+            margin-right: 8px;
+          }
+
+          h2 {
+            text-align: center;
+            color: #007bff;
+            margin-bottom: 20px;
+            font-size: 24px;
+          }
+
+          form {
+            display: flex;
+            flex-direction: column;
+          }
+
+          label {
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+          }
+
+          input,
+          textarea {
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+          }
+
+          input:focus,
+          textarea:focus {
+            border-color: #007bff;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+          }
+
+          input[type="color"] {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 15px;
+            border: none;
+            cursor: pointer;
+          }
+
+          textarea {
+            resize: vertical;
+            min-height: 100px;
           }
 
           button {
-            width: 100%;
-            margin-top: 10px;
-            margin-right: 0;
+            padding: 12px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-right: 10px;
           }
-        }
-      </style>
-      <form action="" method="GET">
 
-        <label for="txtNama">Nama:</label>
-        <input maxlength="50" type="text" id="txtNama" name="txtNama" placeholder="Masukan Nama"
-          requiredautocomplete="name">
+          button {
+            background-color: #007bff;
+          }
 
-        <label for="txtEmail">Email:</label>
-        <input type="email" id="txtEmail" name="txtEmail" placeholder="Masukan Email" required autocomplete="email">
+          button[type="reset"] {
+            background-color: #ff0000;
+          }
 
-        <label for="txtPesan">Pesan:</label>
-        <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan kamu..." required></textarea>
+          @media (max-width: 600px) {
+            #contact {
+              margin: 20px;
+              padding: 20px;
+            }
 
-        <button type="submit">Kirim</button>
-        <button type="reset">Batal</button>
-      </form>
+            button {
+              width: 100%;
+              margin-top: 10px;
+              margin-right: 0;
+            }
+          }
+        </style>
+        <form action="" method="GET">
+
+          <label for="txtNama">Nama:</label>
+          <input maxlength="50" type="text" id="txtNama" name="txtNama" placeholder="Masukan Nama"
+            requiredautocomplete="name">
+
+          <label for="txtEmail">Email:</label>
+          <input type="email" id="txtEmail" name="txtEmail" placeholder="Masukan Email" required autocomplete="email">
+
+          <label for="txtPesan">Pesan:</label>
+          <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan kamu..." required></textarea>
+
+          <button type="submit">Kirim</button>
+          <button type="reset">Batal</button>
+        </form>
     </section>
   </main>
 

@@ -19,4 +19,5 @@ Hari ini Kamis tanggal 9 Oktober 2025, saya belajar:
   <li>section#contact upgrade struktur form
   <li>section#contact styling label
   <li>section#contact styling label>span
+  <li>section#contact styling tombol
 <ol>
