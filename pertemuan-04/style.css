@@ -63,6 +63,32 @@ footer {
     padding: 10px;
 }
 
+header li a:hover {
+    background-color: #85020d;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+header li a:focus {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+header li a:active {
+    background-color: #cc04a1;
+    transform: translateY(1px);
+}
+
+header li a {
+    display: block;
+    padding: 12px 14px;
+    border: 1px solid rgba(255, 255, 255, .35);
+    background: rgba(255, 255, 255, .08);
+    backdrop-filter: saturate(120%);
+}
+
 #about p,
 #contact label {
     display: flex;
@@ -84,14 +110,42 @@ footer {
 }
 
 @media (max-width: 600px) {
-    #about p {
-        flex-direction: column;
-        align-items: flex-start;
+    header {
+        padding: 16px;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
     }
 
-    #about strong {
-        text-align: left;
-        padding-right: 0;
-        margin-bottom: 2px;
+    header h1 {
+        margin: 0 0 8px;
+        font-size: 20px;
+        line-height: 1.2;
     }
+
+    header ul {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+        margin: 8px 0 0;
+    }
+
+    header li a {
+        display: block;
+        padding: 12px 14px;
+        border: 1px solid rgba(255, 255, 255, .35);
+        background: rgba(255, 255, 255, .08);
+        backdrop-filter: saturate(120%);
+    }
+}
+
+#about p {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#about strong {
+    text-align: left;
+    padding-right: 0;
+    margin-bottom: 2px;
 }
