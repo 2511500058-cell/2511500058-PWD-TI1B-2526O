@@ -5,4 +5,5 @@ Nama: M.Tio Saputra<br>
 
 Hari ini Kamis tanggal 15 Oktober 2025, saya belajar:
 <ol>
-<li>copy-paste isi index.html (pertemuan-03) ke index.html (pertemuan-04)
+<li>copy-paste isi index.html (pertemuan-03) ke index.html (pertemuan-04)</li>
+<li>aturan css untuk body dan global reset</li>
