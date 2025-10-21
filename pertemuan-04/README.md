@@ -8,3 +8,4 @@ Hari ini Kamis tanggal 15 Oktober 2025, saya belajar:
 <li>copy-paste isi index.html (pertemuan-03) ke index.html (pertemuan-04)</li>
 <li>aturan css untuk body dan global reset</li>
 <li>styling header</li>
+<li>styling section#home</li>
