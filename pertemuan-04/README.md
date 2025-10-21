@@ -11,3 +11,4 @@ Hari ini Kamis tanggal 15 Oktober 2025, saya belajar:
 <li>styling section#home</li>
 <li>styling footer</li>
 <li>styling navigasi</li>
+<li>styling header mode mobile</li>
