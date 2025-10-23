@@ -242,3 +242,21 @@ button {
         margin-bottom: 2px;
     }
 }
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        left: 16px;
+        top: 8px;
+    }
+}
