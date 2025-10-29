@@ -21,14 +21,16 @@ document.querySelector("form").addEventListener("submit", function (e) {
     }
 });
 
+document.getElementById("menuToggle").addEventListener("click", function () {
+    document.querySelector("nav").classList.toggle("active");
+});
+
 document.querySelector("form").addEventListener("submit", function (e) {
     const nama = document.getElementById("txtNama");
     const email = document.getElementById("txtEmail");
     const pesan = document.getElementById("txtPesan");
-
     document.querySelectorAll(".error-msg").forEach(el => el.remove());
     [nama, email, pesan].forEach(el => el.style.border = "");
-
     let isValid = true;
     if (nama.value.trim().length < 3) {
         showError(nama, "Nama minimal 3 huruf dan tidak boleh kosong.");
@@ -54,6 +56,7 @@ document.querySelector("form").addEventListener("submit", function (e) {
         alert("Terima kasih, " + nama.value + "!\nPesan Anda telah dikirim.");
     }
 });
+
 function showError(inputElement, message) {
     const label = inputElement.closest("label");
     if (!label) return;
@@ -75,6 +78,7 @@ function showError(inputElement, message) {
     inputElement.style.border = "1px solid red";
     alignErrorMessage(small, inputElement);
 }
+
 function alignErrorMessage(smallEl, inputEl) {
     const isMobile = window.matchMedia("(max-width: 600px)").matches;
     if (isMobile) {
@@ -90,11 +94,19 @@ function alignErrorMessage(smallEl, inputEl) {
     smallEl.style.marginLeft = offsetLeft + "px";
     smallEl.style.width = Math.round(rectInput.width) + "px";
 }
+
 window.addEventListener("resize", () => {
     document.querySelectorAll(".error-msg").forEach(small => {
         const target = document.getElementById(small.dataset.forId);
         if (target) alignErrorMessage(small, target);
     });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const homeSection = document.getElementById("home");
+    const ucapan = document.createElement("p");
+    ucapan.textContent = "Hello! Selamat datang di halaman saya!";
+    homeSection.appendChild(ucapan);
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -166,7 +178,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     setupCharCountLayout();
     window.addEventListener('resize', applyResponsiveLayout);
-
 });
 
 document.getElementById("txtPesan").addEventListener("input", function () {
