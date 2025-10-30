@@ -34,7 +34,14 @@ echo "<br>Nama saya Muhammad Tio Saputra"
         <section id="about">
             <?php
             $NIM = "2511500058";
-            $namaLengkap = "Muhammad Tio Saputra";
+            $nama = "Muhammad Tio Saputra";
+            $tempatlahir = "Bangka Tengah";
+            $tanggallahir = "24 September 2006";
+            $hobi = " Mendengarkan musik, menonton film atau anime, dan bermain game";
+            $pasangan = "Tidak ada &#9786";
+            $pekerjaan = "Mahasiswa ISB Atma Luhur💙";
+            $namaortu = "Bapak Zuharli dan Ibu Zaila";
+            $namakakak = "M.Aprianto, Siti Noparia, Septi Yulanda Sari";
             ?>
             <h2>Tentang Muhammad Tio Saputra</h2>
             <style>
@@ -70,13 +77,15 @@ echo "<br>Nama saya Muhammad Tio Saputra"
                 }
             </style>
             <p><strong>NIM:</strong> 2511500058<?php echo $NIM; ?></p>
-            <p><strong>Nama Lengkap:</strong> Muhammad Tio Saputra<?php echo $nama; ?></p>
-            <p><strong>Tempat Lahir:</strong> Bangka Tengah</p>
-            <p><strong>Hobi:</strong> Mendengarkan musik, menonton film atau anime, dan bermain game.</p>
-            <p><strong>Pasangan:</strong> Tidak ada😊</p>
-            <p><strong>Pekerjaan:</strong> Mahasiswa ISB Atma Luhur💙</p>
-            <p><strong>Nama Orang Tua:</strong> Bapak Zuharli dan Ibu Zaila</p>
-            <p><strong>Nama Kakak:</strong> M.Aprianto, Siti Noparia, Septi Yulanda Sari</p>
+            <p><strong>Nama Lengkap:</strong><?php echo $nama; ?></p>
+            <p><strong>Tempat Lahir:</strong><?php echo $tempatlahir; ?></p>
+            <p><strong>Tanggal Lahir:</strong><?php echo $tanggallahir; ?></p>
+            <p><strong>Hobi:</strong><?php echo $hobi; ?></p>
+            <p><strong>Pasangan:</strong><?php echo $pasangan; ?></p>
+            <p><strong>Pekerjaan:</strong><?php echo $pekerjaan; ?></p>
+            <p><strong>Nama Orang Tua:</strong><?php echo $namaortu; ?></p>
+            <p><strong>Nama Kakak:</strong><?php echo $namakakak; ?></p>
+
         </section>
         <section id="contact">
             <h2>Kontak Saya</h2>
