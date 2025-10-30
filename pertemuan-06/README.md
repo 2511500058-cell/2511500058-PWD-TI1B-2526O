@@ -9,4 +9,5 @@ Hari ini Kamis tanggal 30 Oktober 2025, saya belajar:
 <li>copy index.html, style.css, dan script.js (pertemuan-05)</li>
 <li>copy index.html dan rename hasil copy ke index.php</li>
 <li>php variabel</li>
+<li>membuat dan styling section ipk</li>
 </ol>
