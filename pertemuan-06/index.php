@@ -19,6 +19,7 @@
                 <li><a href="#home">Beranda</a></li>
                 <li><a href="#about">Tentang</a></li>
                 <li><a href="#contact">Kontak</a></li>
+                <li><a href="#ipk">Kontak</a></li>
             </ul>
         </nav>
     </header>
@@ -178,7 +179,6 @@ echo "<br>Nama saya Muhammad Tio Saputra"
         echo "<p><strong>IPK =</strong> " . number_format($IPK, 2) . "</p>";
         ?>
       </section>
-      
         <section id="contact">
             <h2>Kontak Saya</h2>
             <form action="" method="GET">
