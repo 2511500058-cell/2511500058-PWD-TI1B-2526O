@@ -27,11 +27,15 @@
             <h2>Selamat datang</h2>
             <p>Ini contoh paragraf HTML.</p>
             <?php
-echo "Halo Dunia!";
-echo "Nama saya Muhammad Tio Saputra"
+echo "Halo Dunia!"; 
+echo "<br>Nama saya Muhammad Tio Saputra"
 ?>
         </section>
         <section id="about">
+            <?php
+            $NIM = "2511500058";
+            $namaLengkap = "Muhammad Tio Saputra";
+            ?>
             <h2>Tentang Muhammad Tio Saputra</h2>
             <style>
                 #about p {
@@ -65,8 +69,8 @@ echo "Nama saya Muhammad Tio Saputra"
                     }
                 }
             </style>
-            <p><strong>NIM:</strong> 2511500058</p>
-            <p><strong>Nama Lengkap:</strong> Muhammad Tio Saputra</p>
+            <p><strong>NIM:</strong> 2511500058<?php echo $NIM; ?></p>
+            <p><strong>Nama Lengkap:</strong> Muhammad Tio Saputra<?php echo $nama; ?></p>
             <p><strong>Tempat Lahir:</strong> Bangka Tengah</p>
             <p><strong>Hobi:</strong> Mendengarkan musik, menonton film atau anime, dan bermain game.</p>
             <p><strong>Pasangan:</strong> Tidak ada😊</p>
