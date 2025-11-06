@@ -77,7 +77,7 @@ echo "<br>Nama saya Muhammad Tio Saputra"
                     }
                 }
             </style>
-            <p><strong>NIM:</strong> 2511500058<?php echo $NIM; ?></p>
+            <p><strong>NIM:</strong><?php echo $NIM; ?></p>
             <p><strong>Nama Lengkap:</strong><?php echo $nama; ?></p>
             <p><strong>Tempat Lahir:</strong><?php echo $tempatlahir; ?></p>
             <p><strong>Tanggal Lahir:</strong><?php echo $tanggallahir; ?></p>
