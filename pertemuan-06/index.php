@@ -99,8 +99,8 @@ echo "<br>Nama saya Muhammad Tio Saputra"
 
         $sksMatkul1 = 4;
         $sksMatkul2 = 2;
-        $sksMatkul3 = 3;
-        $sksMatkul4 = 3;
+        $sksMatkul3 = 6;
+        $sksMatkul4 = 5;
         $sksMatkul5 = 3;
 
         $nilaiHadir1 = 90; $nilaiTugas1 = 60; $nilaiUTS1 = 80; $nilaiUAS1 = 70;
@@ -109,50 +109,213 @@ echo "<br>Nama saya Muhammad Tio Saputra"
         $nilaiHadir4 = 95; $nilaiTugas4 = 85; $nilaiUTS4 = 80; $nilaiUAS4 = 90;
         $nilaiHadir5 = 69; $nilaiTugas5 = 80; $nilaiUTS5 = 90; $nilaiUAS5 = 100;
 
-        function hitungNilaiAkhir($hadir, $tugas, $uts, $uas) {
-          return (0.1 * $hadir) + (0.2 * $tugas) + (0.3 * $uts) + (0.4 * $uas);
+        $nilaiAkhir1 = (0.1 * $nilaiHadir1) + (0.2 * $nilaiTugas1) + (0.3 * $nilaiUTS1) + (0.4 * $nilaiUAS1);
+        $nilaiAkhir2 = (0.1 * $nilaiHadir2) + (0.2 * $nilaiTugas2) + (0.3 * $nilaiUTS2) + (0.4 * $nilaiUAS2);
+        $nilaiAkhir3 = (0.1 * $nilaiHadir3) + (0.2 * $nilaiTugas3) + (0.3 * $nilaiUTS3) + (0.4 * $nilaiUAS3);
+        $nilaiAkhir4 = (0.1 * $nilaiHadir4) + (0.2 * $nilaiTugas4) + (0.3 * $nilaiUTS4) + (0.4 * $nilaiUAS4);
+        $nilaiAkhir5 = (0.1 * $nilaiHadir5) + (0.2 * $nilaiTugas5) + (0.3 * $nilaiUTS5) + (0.4 * $nilaiUAS5);
+
+        if ($nilaiHadir1 < 70) {
+          $grade1 = "E";
+        } elseif ($nilaiAkhir1 >= 85) {
+          $grade1 = "A";
+        } elseif ($nilaiAkhir1 >= 80) {
+          $grade1 = "A-";
+        } elseif ($nilaiAkhir1 >= 75) {
+          $grade1 = "B+";
+        } elseif ($nilaiAkhir1 >= 70) {
+          $grade1 = "B";
+        } elseif ($nilaiAkhir1 >= 65) {
+          $grade1 = "B-";
+        } elseif ($nilaiAkhir1 >= 60) {
+          $grade1 = "C+";
+        } elseif ($nilaiAkhir1 >= 55) {
+          $grade1 = "C";
+        } elseif ($nilaiAkhir1 >= 50) {
+          $grade1 = "C-";
+        } elseif ($nilaiAkhir1 >= 45) {
+          $grade1 = "D";
+        } elseif ($nilaiAkhir1 >= 40) {
+          $grade1 = "E";
+        } elseif ($nilaiAkhir1 >= 35) {
         }
 
-        function tentukanGrade($nilaiAkhir, $hadir) {
-          if ($hadir < 70) return "E";
-          if ($nilaiAkhir >= 85) return "A";
-          elseif ($nilaiAkhir >= 80) return "A-";
-          elseif ($nilaiAkhir >= 75) return "B+";
-          elseif ($nilaiAkhir >= 70) return "B";
-          elseif ($nilaiAkhir >= 65) return "B-";
-          elseif ($nilaiAkhir >= 60) return "C+";
-          elseif ($nilaiAkhir >= 55) return "C";
-          elseif ($nilaiAkhir >= 50) return "C-";
-          elseif ($nilaiAkhir >= 45) return "D";
-          else return "E";
+        if ($nilaiHadir2 < 70) {
+          $grade2 = "E";
+        } elseif ($nilaiAkhir2 >= 85) {
+          $grade2 = "A";
+        } elseif ($nilaiAkhir2 >= 80) {
+          $grade2 = "A-";
+        } elseif ($nilaiAkhir2 >= 75) {
+          $grade2 = "B+";
+        } elseif ($nilaiAkhir2 >= 70) {
+          $grade2 = "B";
+        } elseif ($nilaiAkhir2 >= 65) {
+          $grade2 = "B-";
+        } elseif ($nilaiAkhir2 >= 60) {
+          $grade2 = "C+";
+        } elseif ($nilaiAkhir2 >= 55) {
+          $grade2 = "C";
+        } elseif ($nilaiAkhir2 >= 50) {
+          $grade2 = "C-";
+        } elseif ($nilaiAkhir2 >= 45) {
+          $grade1 = "D";
+        } elseif ($nilaiAkhir1 >= 40) {
+          $grade1 = "E";
+        } elseif ($nilaiAkhir1 >= 35) {
         }
 
-        function angkaMutu($grade) {
-          switch ($grade) {
-            case "A": return 4.00;
-            case "A-": return 3.70;
-            case "B+": return 3.30;
-            case "B": return 3.00;
-            case "B-": return 2.70;
-            case "C+": return 2.30;
-            case "C": return 2.00;
-            case "C-": return 1.70;
-            case "D": return 1.00;
-            default: return 0.00;
-          }
+        if ($nilaiHadir3 < 70) {
+          $grade3 = "E";
+        } elseif ($nilaiAkhir3 >= 85) {
+          $grade3 = "A";
+        } elseif ($nilaiAkhir3 >= 80) {
+          $grade3 = "A-";
+        } elseif ($nilaiAkhir3 >= 75) {
+          $grade3 = "B+";
+        } elseif ($nilaiAkhir3 >= 70) {
+          $grade3 = "B";
+        } elseif ($nilaiAkhir3 >= 65) {
+          $grade3 = "B-";
+        } elseif ($nilaiAkhir3 >= 60) {
+          $grade3 = "C+";
+        } elseif ($nilaiAkhir3 >= 55) {
+          $grade3 = "C";
+        } elseif ($nilaiAkhir3 >= 50) {
+          $grade3 = "C-";
+        } elseif ($nilaiAkhir3 >= 45) {
+          $grade1 = "D";
+        } elseif ($nilaiAkhir1 >= 40) {
+          $grade1 = "E";
+        } elseif ($nilaiAkhir1 >= 35) {
         }
 
-        function statusKelulusan($grade) {
-          return ($grade == "D" || $grade == "E") ? "Gagal" : "Lulus";
+        if ($nilaiHadir4 < 70) {
+          $grade4 = "E";
+        } elseif ($nilaiAkhir4 >= 85) {
+          $grade4 = "A";
+        } elseif ($nilaiAkhir4 >= 80) {
+          $grade4 = "A-";
+        } elseif ($nilaiAkhir4 >= 75) {
+          $grade4 = "B+";
+        } elseif ($nilaiAkhir4 >= 70) {
+          $grade4 = "B";
+        } elseif ($nilaiAkhir4 >= 65) {
+          $grade4 = "B-";
+        } elseif ($nilaiAkhir4 >= 60) {
+          $grade4 = "C+";
+        } elseif ($nilaiAkhir4 >= 55) {
+          $grade4 = "C";
+        } elseif ($nilaiAkhir4 >= 50) {
+          $grade4 = "C-";
+        } elseif ($nilaiAkhir4 >= 45) {
+          $grade1 = "D";
+        } elseif ($nilaiAkhir1 >= 40) {
+          $grade1 = "E";
+        } elseif ($nilaiAkhir1 >= 35) {
         }
 
-        for ($i=1; $i<=5; $i++) {
-          ${"nilaiAkhir$i"} = hitungNilaiAkhir(${"nilaiHadir$i"}, ${"nilaiTugas$i"}, ${"nilaiUTS$i"}, ${"nilaiUAS$i"});
-          ${"grade$i"} = tentukanGrade(${"nilaiAkhir$i"}, ${"nilaiHadir$i"});
-          ${"mutu$i"} = angkaMutu(${"grade$i"});
-          ${"bobot$i"} = ${"mutu$i"} * ${"sksMatkul$i"};
-          ${"status$i"} = statusKelulusan(${"grade$i"});
+        if ($nilaiHadir5 < 70) {
+          $grade5 = "E";
+        } elseif ($nilaiAkhir5 >= 85) {
+          $grade5 = "A";
+        } elseif ($nilaiAkhir5 >= 80) {
+          $grade5 = "A-";
+        } elseif ($nilaiAkhir5 >= 75) {
+          $grade5 = "B+";
+        } elseif ($nilaiAkhir5 >= 70) {
+          $grade5 = "B";
+        } elseif ($nilaiAkhir5 >= 65) {
+          $grade5 = "B-";
+        } elseif ($nilaiAkhir5 >= 60) {
+          $grade5 = "C+";
+        } elseif ($nilaiAkhir5 >= 55) {
+          $grade5 = "C";
+        } elseif ($nilaiAkhir5 >= 50) {
+          $grade5 = "C-";
+        } elseif ($nilaiAkhir5 >= 45) {
+          $grade1 = "D";
+        } elseif ($nilaiAkhir1 >= 40) {
+          $grade1 = "E";
+        } elseif ($nilaiAkhir1 >= 35) {
         }
+
+        switch ($grade1) {
+          case "A": $mutu1 = 4.00; break;
+          case "A-": $mutu1 = 3.70; break;
+          case "B+": $mutu1 = 3.30; break;
+          case "B": $mutu1 = 3.00; break;
+          case "B-": $mutu1 = 2.70; break;
+          case "C+": $mutu1 = 2.30; break;
+          case "C": $mutu1 = 2.00; break;
+          case "C-": $mutu1 = 1.70; break;
+          case "D": $mutu1 = 1.00; break;
+          default: $mutu1 = 0.00;
+        }
+
+        switch ($grade2) {
+          case "A": $mutu2 = 4.00; break;
+          case "A-": $mutu2 = 3.70; break;
+          case "B+": $mutu2 = 3.30; break;
+          case "B": $mutu2 = 3.00; break;
+          case "B-": $mutu2 = 2.70; break;
+          case "C+": $mutu2 = 2.30; break;
+          case "C": $mutu2 = 2.00; break;
+          case "C-": $mutu2 = 1.70; break;
+          case "D": $mutu2 = 1.00; break;
+          default: $mutu2 = 0.00;
+        }
+
+        switch ($grade3) {
+          case "A": $mutu3 = 4.00; break;
+          case "A-": $mutu3 = 3.70; break;
+          case "B+": $mutu3 = 3.30; break;
+          case "B": $mutu3 = 3.00; break;
+          case "B-": $mutu3 = 2.70; break;
+          case "C+": $mutu3 = 2.30; break;
+          case "C": $mutu3 = 2.00; break;
+          case "C-": $mutu3 = 1.70; break;
+          case "D": $mutu3 = 1.00; break;
+          default: $mutu3 = 0.00;
+        }
+
+        switch ($grade4) {
+          case "A": $mutu4 = 4.00; break;
+          case "A-": $mutu4 = 3.70; break;
+          case "B+": $mutu4 = 3.30; break;
+          case "B": $mutu4 = 3.00; break;
+          case "B-": $mutu4 = 2.70; break;
+          case "C+": $mutu4 = 2.30; break;
+          case "C": $mutu4 = 2.00; break;
+          case "C-": $mutu4 = 1.70; break;
+          case "D": $mutu4 = 1.00; break;
+          default: $mutu4 = 0.00;
+        }
+
+        switch ($grade5) {
+          case "A": $mutu5 = 4.00; break;
+          case "A-": $mutu5 = 3.70; break;
+          case "B+": $mutu5 = 3.30; break;
+          case "B": $mutu5 = 3.00; break;
+          case "B-": $mutu5 = 2.70; break;
+          case "C+": $mutu5 = 2.30; break;
+          case "C": $mutu5 = 2.00; break;
+          case "C-": $mutu5 = 1.70; break;
+          case "D": $mutu5 = 1.00; break;
+          default: $mutu5 = 0.00;
+        }
+
+        $status1 = ($grade1 == "D" || $grade1 == "E") ? "Gagal" : "Lulus";
+        $status2 = ($grade2 == "D" || $grade2 == "E") ? "Gagal" : "Lulus";
+        $status3 = ($grade3 == "D" || $grade3 == "E") ? "Gagal" : "Lulus";
+        $status4 = ($grade4 == "D" || $grade4 == "E") ? "Gagal" : "Lulus";
+        $status5 = ($grade5 == "D" || $grade5 == "E") ? "Gagal" : "Lulus";
+
+        $bobot1 = $mutu1 * $sksMatkul1;
+        $bobot2 = $mutu2 * $sksMatkul2;
+        $bobot3 = $mutu3 * $sksMatkul3;
+        $bobot4 = $mutu4 * $sksMatkul4;
+        $bobot5 = $mutu5 * $sksMatkul5;
 
         $totalBobot = $bobot1 + $bobot2 + $bobot3 + $bobot4 + $bobot5;
         $totalSKS = $sksMatkul1 + $sksMatkul2 + $sksMatkul3 + $sksMatkul4 + $sksMatkul5;
