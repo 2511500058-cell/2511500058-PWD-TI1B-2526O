@@ -15,7 +15,6 @@
     $sespesan = $_SESSION["pesan"];
   endif;
   ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -360,6 +359,13 @@ echo "<br>Nama saya Muhammad Tio Saputra"
                 <button type="submit">Kirim</button>
                 <button type="reset">Batal</button>
             </form>
+            <?php if (!empty($sesname)): ?>
+            <p>Terimakasih sudah menghubungi kami:
+        <label>Nama: <strong><?php echo $sesname; ?></strong></label>
+        <label>Email: <strong><?php echo $sesemail; ?></strong></label>
+        <label>Pesan: <strong><?php echo $sespesan; ?></strong></label>
+      </p>
+       <?php endif; ?>
         </section>
     </main>
     <footer><p>&copy; 2025 Muhammad Tio Saputra [2511500058]</p></footer>
