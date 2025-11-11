@@ -31,16 +31,6 @@ header li a {
     padding: 6px 12px;
 }
 
-#home:target~header nav a[href="#home"],
-#about:target~header nav a[href="#about"],
-#ipk:target~header nav a[href="#ipk"],
-#contact:target~header nav a[href="#contact"] {
-    background: #fff;
-    color: #003366;
-    font-weight: bold;
-    border-radius: 6px;
-    transition: all 0.3s ease;
-
     #home,
     #about,
     #contact,
@@ -296,4 +286,3 @@ header li a {
         width: 100%;
 
     }
-}
