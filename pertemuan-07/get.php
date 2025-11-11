@@ -303,6 +303,11 @@ echo "<br>Nama saya Muhammad Tio Saputra"
           echo "<p><strong>Angka Mutu :</strong> " . number_format(${"mutu$i"}, 2) . "</p>";
           echo "<p><strong>Bobot :</strong> " . number_format(${"bobot$i"}, 2) . "</p>";
           echo "<p><strong>Status :</strong> ${'status'.$i}</p>";}
+
+          echo "<hr>";
+        echo "<p><strong>Total Bobot =</strong> " . number_format($totalBobot, 2) . "</p>";
+        echo "<p><strong>Total SKS =</strong> $totalSKS</p>";
+        echo "<p><strong>IPK =</strong> " . number_format($IPK, 2) . "</p>";
         ?>
       </section>
       
