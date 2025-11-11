@@ -45,38 +45,7 @@ echo "<br>Nama saya Muhammad Tio Saputra"
             $namakakak = "M.Aprianto, Siti Noparia, Septi Yulanda Sari";
             ?>
             <h2>Tentang Muhammad Tio Saputra</h2>
-            <style>
-                #about p {
-                    display: flex;
-                    justify-content: flex-start;
-                    align-items: baseline;
-                    margin: 0;
-                    padding: 6px 0;
-                    border-bottom: 1px solid #e6e6e6;
-                }
 
-                #about strong {
-                    min-width: 180px;
-                    color: #003366;
-                    font-weight: 600;
-                    text-align: right;
-                    padding-right: 16px;
-                    flex-shrink: 0;
-                }
-
-                @media (max-width: 600px) {
-                    #about p {
-                        flex-direction: column;
-                        align-items: flex-start;
-                    }
-
-                    #about strong {
-                        text-align: left;
-                        padding-right: 0;
-                        margin-bottom: 2px;
-                    }
-                }
-            </style>
             <p><strong>NIM:</strong><?php echo $NIM; ?></p>
             <p><strong>Nama Lengkap:</strong><?php echo $nama; ?></p>
             <p><strong>Tempat Lahir:</strong><?php echo $tempatlahir; ?></p>
@@ -333,13 +302,7 @@ echo "<br>Nama saya Muhammad Tio Saputra"
           echo "<p><strong>Grade :</strong> ${'grade'.$i}</p>";
           echo "<p><strong>Angka Mutu :</strong> " . number_format(${"mutu$i"}, 2) . "</p>";
           echo "<p><strong>Bobot :</strong> " . number_format(${"bobot$i"}, 2) . "</p>";
-          echo "<p><strong>Status :</strong> ${'status'.$i}</p>";
-        }
-
-        echo "<hr>";
-        echo "<p><strong>Total Bobot =</strong> " . number_format($totalBobot, 2) . "</p>";
-        echo "<p><strong>Total SKS =</strong> $totalSKS</p>";
-        echo "<p><strong>IPK =</strong> " . number_format($IPK, 2) . "</p>";
+          echo "<p><strong>Status :</strong> ${'status'.$i}</p>";}
         ?>
       </section>
       
@@ -347,27 +310,36 @@ echo "<br>Nama saya Muhammad Tio Saputra"
             <h2>Kontak Saya</h2>
             <form action="" method="GET">
                 <label for="txtNama"><span>Nama:</span>
-                    <input type="text" id="txtNama" name="txtNama" placeholder="Masukan Nama"
-                        requiredautocomplete="name">
+                    <input type="text" 
+                    id="txtNama" 
+                    name="txtNama"
+                    placeholder="Masukan Nama"
+                    requiredautocomplete="name">
                 </label>
+
                 <label for="txtEmail"><span>Email:</span>
-                    <input type="email" id="txtEmail" name="txtEmail" placeholder="Masukan Email"
-                        requiredautocomplete="email">
+                    <input type="email"
+                    id="txtEmail"
+                    name="txtEmail"
+                    placeholder="Masukan Email"
+                    requiredautocomplete="email">
                 </label>
+
                 <label for="txtPesan"><span>Pesan:</span>
-                    <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan kamu..."
-                        required></textarea>
+                    <textarea id="txtPesan"
+                    name="txtPesan"
+                    rows="4"
+                    placeholder="Tulis pesan kamu..."
+                    required></textarea>
                     <small id="charCount">0/200 karakter</small>
                 </label>
+
                 <button type="submit">Kirim</button>
                 <button type="reset">Batal</button>
             </form>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2025 Muhammad Tio Saputra [2511500058]</p>
-    </footer>
+    <footer><p>&copy; 2025 Muhammad Tio Saputra [2511500058]</p></footer>
     <script src="script.js"></script>
 </body>
-
 </html>
