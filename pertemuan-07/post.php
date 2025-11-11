@@ -170,7 +170,7 @@ echo "<br>Nama saya Muhammad Tio Saputra"
         } elseif ($nilaiAkhir3 >= 50) {
           $grade3 = "C-";
         } elseif ($nilaiAkhir3 >= 45) {
-          $3 = "D";
+          $grade3 = "D";
         } elseif ($nilaiAkhir3 >= 40) {
           $grade3 = "E";
         } elseif ($nilaiAkhir3 >= 35) {
