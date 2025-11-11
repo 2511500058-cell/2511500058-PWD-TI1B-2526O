@@ -145,9 +145,9 @@ echo "<br>Nama saya Muhammad Tio Saputra"
         } elseif ($nilaiAkhir2 >= 50) {
           $grade2 = "C-";
         } elseif ($nilaiAkhir2 >= 45) {
-          $grade1 = "D";
+          $grade2 = "D";
         } elseif ($nilaiAkhir2 >= 40) {
-          $grade1 = "E";
+          $grade2 = "E";
         } elseif ($nilaiAkhir2 >= 35) {
         }
 
@@ -170,9 +170,9 @@ echo "<br>Nama saya Muhammad Tio Saputra"
         } elseif ($nilaiAkhir3 >= 50) {
           $grade3 = "C-";
         } elseif ($nilaiAkhir3 >= 45) {
-          $grade1 = "D";
+          $3 = "D";
         } elseif ($nilaiAkhir3 >= 40) {
-          $grade1 = "E";
+          $grade3 = "E";
         } elseif ($nilaiAkhir3 >= 35) {
         }
 
@@ -195,9 +195,9 @@ echo "<br>Nama saya Muhammad Tio Saputra"
         } elseif ($nilaiAkhir4 >= 50) {
           $grade4 = "C-";
         } elseif ($nilaiAkhir4 >= 45) {
-          $grade1 = "D";
+          $grade4 = "D";
         } elseif ($nilaiAkhir4 >= 40) {
-          $grade1 = "E";
+          $grade4 = "E";
         } elseif ($nilaiAkhir4 >= 35) {
         }
 
@@ -220,9 +220,9 @@ echo "<br>Nama saya Muhammad Tio Saputra"
         } elseif ($nilaiAkhir5 >= 50) {
           $grade5 = "C-";
         } elseif ($nilaiAkhir5 >= 45) {
-          $grade1 = "D";
+          $grade5 = "D";
         } elseif ($nilaiAkhir5 >= 40) {
-          $grade1 = "E";
+          $grade5 = "E";
         } elseif ($nilaiAkhir5 >= 35) {
         }
 
