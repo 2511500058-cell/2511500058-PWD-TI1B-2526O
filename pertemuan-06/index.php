@@ -342,6 +342,7 @@ echo "<br>Nama saya Muhammad Tio Saputra"
         echo "<p><strong>IPK =</strong> " . number_format($IPK, 2) . "</p>";
         ?>
       </section>
+      
         <section id="contact">
             <h2>Kontak Saya</h2>
             <form action="" method="GET">
