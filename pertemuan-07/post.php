@@ -368,6 +368,7 @@ echo "<br>Nama saya Muhammad Tio Saputra"
        <?php endif; ?>
         </section>
     </main>
+    
     <footer><p>&copy; 2025 Muhammad Tio Saputra [2511500058]</p></footer>
     <script src="script.js"></script>
 </body>
