@@ -47,39 +47,65 @@ endif;
     <section id="home">
       <h2>Selamat Datang</h2>
       <?php
-      echo "Halo Dunia!<br>";
-      echo "Nama saya Muhammad Tio Saputra<br>";
+      echo "halo dunia!<br>";
+      echo "nama saya hadi";
       ?>
-     
-   </section>
-        <section id="about">
-            <?php
-            $NIM = "2511500058";
-            $nama = "Muhammad Tio Saputra";
-            $tempatlahir = "Bangka Tengah";
-            $tanggallahir = "24 September 2006";
-            $hobi = " Mendengarkan musik, menonton film atau anime, dan bermain game";
-            $pasangan = "Tidak ada &#9786";
-            $pekerjaan = "Mahasiswa ISB Atma Luhur💙";
-            $namaortu = "Bapak Zuharli dan Ibu Zaila";
-            $namakakak = "M.Aprianto, Siti Noparia, Septi Yulanda Sari";
-            ?>
-            <h2>Tentang Muhammad Tio Saputra</h2>
+      <p>Ini contoh paragraf HTML.</p>
+    </section>
 
-            <p><strong>NIM:</strong><?php echo $NIM; ?></p>
-            <p><strong>Nama Lengkap:</strong><?php echo $nama; ?></p>
-            <p><strong>Tempat Lahir:</strong><?php echo $tempatlahir; ?></p>
-            <p><strong>Tanggal Lahir:</strong><?php echo $tanggallahir; ?></p>
-            <p><strong>Hobi:</strong><?php echo $hobi; ?></p>
-            <p><strong>Pasangan:</strong><?php echo $pasangan; ?></p>
-            <p><strong>Pekerjaan:</strong><?php echo $pekerjaan; ?></p>
-            <p><strong>Nama Orang Tua:</strong><?php echo $namaortu; ?></p>
-            <p><strong>Nama Kakak:</strong><?php echo $namakakak; ?></p>
-        </section>
+    <section id="about">
+      <?php
+      $NIM = "0344300002" ;
+      $Nama = "Al kautar Benyamin" ;
+      $tempat = "Jebus";
+      $tanggal = "23 nov 2020" ;
+      $hobi = "Mancing" ;
+      $pasangan = "Tidak ada" ;
+      $pekerjaan = "Mahasiswa" ;
+      $namaortu  = "Zuhar" ;
+      $namakakak = "Nopa" ;
+      $namaadik = "Septi" ;
+      ?>
+      <h2>Tentang Saya</h2>
+      
+    <section>
+      <p><strong>NIM:</strong><?php echo $NIM ?>
+      <p><strong>Nama Lengkap:</strong><?php echo $Nama ?></p>
+      <p><strong>Tempat Lahir:</strong><?php echo $tempat ?></p>
+      <p><strong>Tanggal Lahir:</strong><?php echo $tanggal ?></p>
+      <p><strong>Hobi:</strong><?php echo $hobi ?></p> 
+      <p><strong>Pasangan:</strong><?php echo $pasangan ?></p>
+      <p><strong>Pekerjaan:</strong><?php echo $pekerjaan ?></p>
+      <p><strong>Nama Orang Tua:</strong><?php echo $namaortu ?></p>
+      <p><strong>Nama Kakak:</strong><?php echo $namakakak ?></p>
+      <p><strong>Nama Adik:</strong><?php echo $namaadik ?></p>
+    </section>
 
-        <section id="entry"
-        <h2>Entry Data Mahasiswa</h2>
-                    <label for="NIM">:</label>
+    <section id="entry">
+    <h2>Entry Data Mahasiswa</h2>
+    <form action="index.php" method="POST" id="entry">
+                <div class="form-group">
+                    <label for="NIM">NIM:</label>
+                    <input type="text" id="NIM" name="NIM" required>
+                </div>
+                <div class="form-group">
+                    <label for="Nama">Nama Lengkap:</label>
+                    <input type="text" id="Nama" name="Nama" required>
+                </div>
+                <div class="form-group">
+                    <label for="tempat">Tempat Lahir:</label>
+                    <input type="text" id="tempat" name="tempat" required>
+                </div>
+                <div class="form-group">
+                    <label for="tanggal">Tanggal Lahir:</label>
+                    <input type="date" id="tanggal" name="tanggal" required>
+                </div>
+                <div class="form-group">
+                    <label for="hobi">Hobi:</label>
+                    <input type="text" id="hobi" name="hobi">
+                </div>
+                <div class="form-group">
+                    <label for="pasangan">Pasangan:</label>
                     <input type="text" id="pasangan" name="pasangan">
                 </div>
                 <div class="form-group">
@@ -87,18 +113,24 @@ endif;
                     <input type="text" id="pekerjaan" name="pekerjaan">
                 </div>
                 <div class="form-group">
-                    <label for="nama_orang_tua">Nama Orang Tua:</label>
-                    <input type="text" id="nama_orang_tua" name="nama_orang_tua">
+                    <label for="namaortu">Nama Orang Tua:</label>
+                    <input type="text" id="namaortu" name="namaortu">
                 </div>
                 <div class="form-group">
-                    <label for="nama_kakak">Nama Kakak:</label>
-                    <input type="text" id="nama_kakak" name="nama_kakak">
+                    <label for="namakakak">Nama Kakak:</label>
+                    <input type="text" id="namakakak" name="namakakak">
+                    <div class="form-group">
+                    <label for="namaadik">Nama Adik:</label>
+                    <input type="text" id="namaadik" name="namaadik">
                 </div>
-                <div class="form-group">
-                    <label for="nama_adik">Nama Adik:</label>
-                    <input type="text" id="nama_adik" name="nama_adik">
+                <div class="form-actions">
+                    <button type="submit" class="btn-submit">Kirim</button>
+                    <button type="reset" class="btn-reset">Batal</button>
                 </div>
-
+            </form>
+        </div>
+    </section>
+                
     <section id="contact">
       <h2>Kontak Kami</h2>
       <form action="proses.php" method="POST">
@@ -115,7 +147,6 @@ endif;
           <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan anda..." required></textarea>
           <small id="charCount">0/200 karakter</small>
         </label>
-
 
         <button type="submit">Kirim</button>
         <button type="reset">Batal</button>
@@ -135,7 +166,7 @@ endif;
   </main>
 
   <footer>
-    <p>&copy; 2025 Muhammad Tio Saputra [0344300002]</p>
+    <p>&copy; 2025 Yohanes Setiawan Japriadi [0344300002]</p>
   </footer>
 
   <script src="script.js"></script>
