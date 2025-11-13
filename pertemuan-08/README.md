@@ -10,4 +10,6 @@ Proses saya mengerjakan UTS ini sebagai berikut:<br>
   <li>mengunduh bahan uts dan exctract ke repo github lokal</li>
   <li>menambahkan section id entry data mahasiswa</li>
   <li>mengatur section about</li>
+  <li>buat form entry data mahasiswa</li>
+  <li>mengatur styling pada entry data</li>
 </ol>
