@@ -38,6 +38,7 @@ endif;
         <li><a href="#home">Beranda</a></li>
         <li><a href="#about">Tentang</a></li>
         <li><a href="#contact">Kontak</a></li>
+        <li><a href="#entry">Entry Data Mahasiswa</a></li>
       </ul>
     </nav>
   </header>
@@ -46,40 +47,57 @@ endif;
     <section id="home">
       <h2>Selamat Datang</h2>
       <?php
-      echo "halo dunia!<br>";
-      echo "nama saya hadi";
+      echo "Halo Dunia!<br>";
+      echo "Nama saya Muhammad Tio Saputra<br>";
       ?>
-      <p>Ini contoh paragraf HTML.</p>
-    </section>
+     
+   </section>
+        <section id="about">
+            <?php
+            $NIM = "2511500058";
+            $nama = "Muhammad Tio Saputra";
+            $tempatlahir = "Bangka Tengah";
+            $tanggallahir = "24 September 2006";
+            $hobi = " Mendengarkan musik, menonton film atau anime, dan bermain game";
+            $pasangan = "Tidak ada &#9786";
+            $pekerjaan = "Mahasiswa ISB Atma Luhur💙";
+            $namaortu = "Bapak Zuharli dan Ibu Zaila";
+            $namakakak = "M.Aprianto, Siti Noparia, Septi Yulanda Sari";
+            ?>
+            <h2>Tentang Muhammad Tio Saputra</h2>
 
-    <section id="about">
-      <?php
-      $nim = 2511500010;
-      $NIM = '0344300002';
-      $nama = "Say'yid Abdullah";
-      $Nama = 'Al\'kautar Benyamin';
-      $tempat = "Jebus";
-      ?>
-      <h2>Tentang Saya</h2>
-      <p><strong>NIM:</strong>
-        <?php
-        echo $NIM;
-        ?>
-      </p>
-      <p><strong>Nama Lengkap:</strong>
-        <?php
-        echo $Nama;
-        ?> &#128526;
-      </p>
-      <p><strong>Tempat Lahir:</strong> <?php echo $tempat; ?></p>
-      <p><strong>Tanggal Lahir:</strong> 1 Januari 2000</p>
-      <p><strong>Hobi:</strong> Memasak, coding, dan bermain musik &#127926;</p>
-      <p><strong>Pasangan:</strong> Belum ada &hearts;</p>
-      <p><strong>Pekerjaan:</strong> Dosen di ISB Atma Luhur &copy; 2025</p>
-      <p><strong>Nama Orang Tua:</strong> Bapak Setiawan dan Ibu Maria</p>
-      <p><strong>Nama Kakak:</strong> Antonius Setiawan</p>
-      <p><strong>Nama Adik:</strong> <?php echo $sespesan ?></p>
-    </section>
+            <p><strong>NIM:</strong><?php echo $NIM; ?></p>
+            <p><strong>Nama Lengkap:</strong><?php echo $nama; ?></p>
+            <p><strong>Tempat Lahir:</strong><?php echo $tempatlahir; ?></p>
+            <p><strong>Tanggal Lahir:</strong><?php echo $tanggallahir; ?></p>
+            <p><strong>Hobi:</strong><?php echo $hobi; ?></p>
+            <p><strong>Pasangan:</strong><?php echo $pasangan; ?></p>
+            <p><strong>Pekerjaan:</strong><?php echo $pekerjaan; ?></p>
+            <p><strong>Nama Orang Tua:</strong><?php echo $namaortu; ?></p>
+            <p><strong>Nama Kakak:</strong><?php echo $namakakak; ?></p>
+        </section>
+
+        <section id="entry"
+        <h2>Entry Data Mahasiswa</h2>
+                    <label for="NIM">:</label>
+                    <input type="text" id="pasangan" name="pasangan">
+                </div>
+                <div class="form-group">
+                    <label for="pekerjaan">Pekerjaan:</label>
+                    <input type="text" id="pekerjaan" name="pekerjaan">
+                </div>
+                <div class="form-group">
+                    <label for="nama_orang_tua">Nama Orang Tua:</label>
+                    <input type="text" id="nama_orang_tua" name="nama_orang_tua">
+                </div>
+                <div class="form-group">
+                    <label for="nama_kakak">Nama Kakak:</label>
+                    <input type="text" id="nama_kakak" name="nama_kakak">
+                </div>
+                <div class="form-group">
+                    <label for="nama_adik">Nama Adik:</label>
+                    <input type="text" id="nama_adik" name="nama_adik">
+                </div>
 
     <section id="contact">
       <h2>Kontak Kami</h2>
@@ -117,7 +135,7 @@ endif;
   </main>
 
   <footer>
-    <p>&copy; 2025 Yohanes Setiawan Japriadi [0344300002]</p>
+    <p>&copy; 2025 Muhammad Tio Saputra [0344300002]</p>
   </footer>
 
   <script src="script.js"></script>

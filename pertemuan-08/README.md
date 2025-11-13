@@ -8,4 +8,5 @@ Kelompok: TI1B<br>
 Proses saya mengerjakan UTS ini sebagai berikut:<br>
 <ol>
   <li>mengunduh bahan uts dan exctract ke repo github lokal</li>
+  <li>menambahkan section id entry data mahasiswa</li>
 </ol>
