@@ -15,6 +15,51 @@ $sespesan = "";
 if (isset($_SESSION["sespesan"])):
   $sespesan = $_SESSION["sespesan"];
 endif;
+
+$sesnim = "";
+if (isset($_SESSION["sesnim"])):
+  $sesnim = $_SESSION["sesnim"];
+endif;
+
+$sestempat = "";
+if (isset($_SESSION["sestempat"])):
+  $sestempat = $_SESSION["sestempat"];
+endif;
+
+$sestanggal = "";
+if (isset($_SESSION["sestanggal"])):
+  $sestanggal = $_SESSION["sestanggal"];
+endif;
+
+$seshobi = "";
+if (isset($_SESSION["seshobi"])):
+  $seshobi = $_SESSION["seshobi"];
+endif;
+
+$sespasangan = "";
+if (isset($_SESSION["sespasangan"])):
+  $sespasangan = $_SESSION["sespasangan"];
+endif;
+
+$sespekerjaan = "";
+if (isset($_SESSION["sespekerjaan"])):
+  $sespekerjaan = $_SESSION["sespekerjaan"];
+endif;
+
+$sesortu = "";
+if (isset($_SESSION["sesortu"])):
+  $sesortu = $_SESSION["sesortu"];
+endif;
+
+$seskakak = "";
+if (isset($_SESSION["seskakak"])):
+  $seskakak = $_SESSION["seskakak"];
+endif;
+
+$sesadik = "";
+if (isset($_SESSION["sesadik"])):
+  $sesadik = $_SESSION["sesadik"];
+endif;
 ?>
 
 <!DOCTYPE html>
@@ -54,87 +99,73 @@ endif;
     </section>
 
     <section id="about">
-      <?php
-      $NIM = "0344300002" ;
-      $Nama = "Al kautar Benyamin" ;
-      $tempat = "Jebus";
-      $tanggal = "23 nov 2020" ;
-      $hobi = "Mancing" ;
-      $pasangan = "Tidak ada" ;
-      $pekerjaan = "Mahasiswa" ;
-      $namaortu  = "Zuhar" ;
-      $namakakak = "Nopa" ;
-      $namaadik = "Septi" ;
-      ?>
       <h2>Tentang Saya</h2>
-      
-    <section>
-      <p><strong>NIM:</strong><?php echo $NIM ?>
-      <p><strong>Nama Lengkap:</strong><?php echo $Nama ?></p>
-      <p><strong>Tempat Lahir:</strong><?php echo $tempat ?></p>
-      <p><strong>Tanggal Lahir:</strong><?php echo $tanggal ?></p>
-      <p><strong>Hobi:</strong><?php echo $hobi ?></p> 
-      <p><strong>Pasangan:</strong><?php echo $pasangan ?></p>
-      <p><strong>Pekerjaan:</strong><?php echo $pekerjaan ?></p>
-      <p><strong>Nama Orang Tua:</strong><?php echo $namaortu ?></p>
-      <p><strong>Nama Kakak:</strong><?php echo $namakakak ?></p>
-      <p><strong>Nama Adik:</strong><?php echo $namaadik ?></p>
+      <p><strong>NIM:</strong><?php echo $sesnim ?></p>
+      <p><strong>Nama Lengkap:</strong><?php echo $sesnama ?></p>
+      <p><strong>Tempat Lahir:</strong><?php echo $sestempat ?></p>
+      <p><strong>Tanggal Lahir:</strong><?php echo $sestanggal ?></p>
+      <p><strong>Hobi:</strong><?php echo $seshobi ?></p>
+      <p><strong>Pasangan:</strong><?php echo $sespasangan ?></p>
+      <p><strong>Pekerjaan:</strong><?php echo $sespekerjaan ?></p>
+      <p><strong>Nama Orang Tua:</strong><?php echo $sesortu ?></p>
+      <p><strong>Nama Kakak:</strong><?php echo $seskakak ?></p>
+      <p><strong>Nama Adik:</strong> <?php echo $sesadik ?></p>
     </section>
 
-    <section id="entry">
-    <h2>Entry Data Mahasiswa</h2>
-    <form action="index.php" method="POST" id="entry">
-                <div class="form-group">
-                    <label for="NIM">NIM:</label>
-                    <input type="text" id="NIM" name="NIM" required>
-                </div>
-                <div class="form-group">
-                    <label for="Nama">Nama Lengkap:</label>
-                    <input type="text" id="Nama" name="Nama" required>
-                </div>
-                <div class="form-group">
-                    <label for="tempat">Tempat Lahir:</label>
-                    <input type="text" id="tempat" name="tempat" required>
-                </div>
-                <div class="form-group">
-                    <label for="tanggal">Tanggal Lahir:</label>
-                    <input type="date" id="tanggal" name="tanggal" required>
-                </div>
-                <div class="form-group">
-                    <label for="hobi">Hobi:</label>
-                    <input type="text" id="hobi" name="hobi">
-                </div>
-                <div class="form-group">
-                    <label for="pasangan">Pasangan:</label>
-                    <input type="text" id="pasangan" name="pasangan">
-                </div>
-                <div class="form-group">
-                    <label for="pekerjaan">Pekerjaan:</label>
-                    <input type="text" id="pekerjaan" name="pekerjaan">
-                </div>
-                <div class="form-group">
-                    <label for="namaortu">Nama Orang Tua:</label>
-                    <input type="text" id="namaortu" name="namaortu">
-                </div>
-                <div class="form-group">
-                    <label for="namakakak">Nama Kakak:</label>
-                    <input type="text" id="namakakak" name="namakakak">
-                    <div class="form-group">
-                    <label for="namaadik">Nama Adik:</label>
-                    <input type="text" id="namaadik" name="namaadik">
-                </div>
-                <div class="form-actions">
-                    <button type="submit" class="btn-submit">Kirim</button>
-                    <button type="reset" class="btn-reset">Batal</button>
-                </div>
-            </form>
-        </div>
+    <section id="entrydata">
+      <h2>Entry Data Mahasiswa</h2>
+      <form action="proses.php" method="post">
+
+       <label for="txtNIM"><span>NIM:</span>
+        <input type="text" id="txtNIM" name="txtNIM" placeholder="Masukkan NIM" required autocomplete="studentid">
+        </label>
+        <label for="txtNama"><span>Nama:</span>
+        <input type="text" id="txtNama" name="txtNama" placeholder="Masukkan nama" required autocomplete="name">
+        </label>
+
+        <label for="txtTempat"><span>Tempat Lahir:</span>
+        <input type="text" id="txtTempat" name="txtTempat" placeholder="Masukkan tempat lahir" required autocomplete="birthplace">
+        </label>
+
+        <label for="txtTanggal"><span>Tanggal Lahir:</span>
+        <input type="text" id="txtTanggal" name="txtTanggal" placeholder="Masukkan tanggal lahir" required autocomplete="birthdate">
+        </label>
+
+        <label for="txtHobi"><span>Hobi:</span>
+        <input type="text" id="txtHobi" name="txtHobi" placeholder="Masukkan hobi" required autocomplete="hobby">
+        </label>
+
+        <label for="txtPasangan"><span>Nama Pasangan:</span>
+        <input type="text" id="txtPasangan" name="txtPasangan" placeholder="Masukkan nama pasangan" autocomplete="partner">
+        </label>
+
+        <label for="txtPekerjaan"><span>Pekerjaan:</span>
+        <input type="text" id="txtPekerjaan" name="txtPekerjaan" placeholder="Masukkan pekerjaan" required autocomplete="occupation">
+        </label>
+
+        <label for="txtOrtu"><span>Nama Orang Tua:</span>
+        <input type="text" id="txtOrtu" name="txtOrtu" placeholder="Masukkan nama orang tua" required autocomplete="parentname">
+        </label>
+
+        <label for="txtKakak"><span>Nama Kakak:</span>
+        <input type="text" id="txtKakak" name="txtKakak" placeholder="Masukkan nama kakak" autocomplete="siblingname">
+        </label>
+
+        <label for="txtAdik"><span>Nama Adik:</span>
+        <input type="text" id="txtAdik" name="txtAdik" placeholder="Masukkan nama adik" autocomplete="siblingname">
+        </label>
+
+        <button type="submit">Simpan</button>
+        <button type="reset">Batal</button>
+        </form>
+        <?php if (!empty($sesnama)): ?>
+        <br><hr>
+        <?php endif; ?>
     </section>
-                
+
     <section id="contact">
       <h2>Kontak Kami</h2>
-      <form action="proses.php" method="POST">
-
+      <form action="proses.php" method="post">
         <label for="txtNama"><span>Nama:</span>
           <input type="text" id="txtNama" name="txtNama" placeholder="Masukkan nama" required autocomplete="name">
         </label>
@@ -148,19 +179,10 @@ endif;
           <small id="charCount">0/200 karakter</small>
         </label>
 
+
         <button type="submit">Kirim</button>
         <button type="reset">Batal</button>
       </form>
-
-      <?php if (!empty($sesnama)): ?>
-        <br><hr>
-        <h2>Yang menghubungi kami</h2>
-        <p><strong>Nama :</strong> <?php echo $sesnama ?></p>
-        <p><strong>Email :</strong> <?php echo $sesemail ?></p>
-        <p><strong>Pesan :</strong> <?php echo $sespesan ?></p>
-      <?php endif; ?>
-
-
 
     </section>
   </main>
