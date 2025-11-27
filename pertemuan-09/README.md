@@ -15,4 +15,5 @@ Kelompok: TI1B
 <li>menghapus section about yang lama</li>
 <li>menambahkan file fungsi.php di pertemuan-09</li>
 <li>menambahkan kode di fungsi.php</li>
+<li>menambahkan kode format tanggal di fungsi.php</li>
 </ol>
