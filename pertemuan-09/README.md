@@ -16,4 +16,5 @@ Kelompok: TI1B
 <li>menambahkan file fungsi.php di pertemuan-09</li>
 <li>menambahkan kode di fungsi.php</li>
 <li>menambahkan kode format tanggal di fungsi.php</li>
+<li>menambahkan kode untuk merender output biodata</li>
 </ol>
