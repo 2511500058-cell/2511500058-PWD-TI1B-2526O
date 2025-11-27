@@ -18,4 +18,5 @@ Kelompok: TI1B
 <li>menambahkan kode format tanggal di fungsi.php</li>
 <li>menambahkan kode untuk merender output biodata</li>
 <li>hapus baris 123-129 di index.php dan digantikan dengan kode baru</li>
+<li>tambahkan kode require_once di index.php</li>
 </ol>
