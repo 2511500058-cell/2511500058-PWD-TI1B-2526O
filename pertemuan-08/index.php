@@ -55,11 +55,6 @@ $seskakak = "";
 if (isset($_SESSION["seskakak"])):
   $seskakak = $_SESSION["seskakak"];
 endif;
-
-$sesadik = "";
-if (isset($_SESSION["sesadik"])):
-  $sesadik = $_SESSION["sesadik"];
-endif;
 ?>
 
 <!DOCTYPE html>
@@ -81,9 +76,9 @@ endif;
     <nav>
       <ul>
         <li><a href="#home">Beranda</a></li>
-        <li><a href="#about">Tentang</a></li>
+         <li><a href="#about">Tentang</a></li>
+         <li><a href="#entrydata">Entry Data Mahasiswa</a></li>
         <li><a href="#contact">Kontak</a></li>
-        <li><a href="#entry">Entry Data Mahasiswa</a></li>
       </ul>
     </nav>
   </header>
@@ -109,7 +104,6 @@ endif;
       <p><strong>Pekerjaan:</strong><?php echo $sespekerjaan ?></p>
       <p><strong>Nama Orang Tua:</strong><?php echo $sesortu ?></p>
       <p><strong>Nama Kakak:</strong><?php echo $seskakak ?></p>
-      <p><strong>Nama Adik:</strong> <?php echo $sesadik ?></p>
     </section>
 
     <section id="entrydata">
@@ -117,42 +111,38 @@ endif;
       <form action="proses.php" method="post">
 
        <label for="txtNIM"><span>NIM:</span>
-        <input type="text" id="txtNIM" name="txtNIM" placeholder="Masukkan NIM" required autocomplete="studentid">
+          <input type="text" id="txtNIM" name="txtNIM" placeholder="Masukkan NIM" required autocomplete="studentid">
         </label>
         <label for="txtNama"><span>Nama:</span>
-        <input type="text" id="txtNama" name="txtNama" placeholder="Masukkan nama" required autocomplete="name">
+          <input type="text" id="txtNama" name="txtNama" placeholder="Masukkan nama" required autocomplete="name">
         </label>
 
         <label for="txtTempat"><span>Tempat Lahir:</span>
-        <input type="text" id="txtTempat" name="txtTempat" placeholder="Masukkan tempat lahir" required autocomplete="birthplace">
+          <input type="text" id="txtTempat" name="txtTempat" placeholder="Masukkan tempat lahir" required autocomplete="birthplace">
         </label>
 
         <label for="txtTanggal"><span>Tanggal Lahir:</span>
-        <input type="text" id="txtTanggal" name="txtTanggal" placeholder="Masukkan tanggal lahir" required autocomplete="birthdate">
+          <input type="text" id="txtTanggal" name="txtTanggal" placeholder="Masukkan tanggal lahir" required autocomplete="birthdate">
         </label>
 
         <label for="txtHobi"><span>Hobi:</span>
-        <input type="text" id="txtHobi" name="txtHobi" placeholder="Masukkan hobi" required autocomplete="hobby">
+          <input type="text" id="txtHobi" name="txtHobi" placeholder="Masukkan hobi" required autocomplete="hobby">
         </label>
 
         <label for="txtPasangan"><span>Nama Pasangan:</span>
-        <input type="text" id="txtPasangan" name="txtPasangan" placeholder="Masukkan nama pasangan" autocomplete="partner">
+          <input type="text" id="txtPasangan" name="txtPasangan" placeholder="Masukkan nama pasangan" autocomplete="partner">
         </label>
 
         <label for="txtPekerjaan"><span>Pekerjaan:</span>
-        <input type="text" id="txtPekerjaan" name="txtPekerjaan" placeholder="Masukkan pekerjaan" required autocomplete="occupation">
+          <input type="text" id="txtPekerjaan" name="txtPekerjaan" placeholder="Masukkan pekerjaan" required autocomplete="occupation">
         </label>
 
         <label for="txtOrtu"><span>Nama Orang Tua:</span>
-        <input type="text" id="txtOrtu" name="txtOrtu" placeholder="Masukkan nama orang tua" required autocomplete="parentname">
+          <input type="text" id="txtOrtu" name="txtOrtu" placeholder="Masukkan nama orang tua" required autocomplete="parentname">
         </label>
 
         <label for="txtKakak"><span>Nama Kakak:</span>
-        <input type="text" id="txtKakak" name="txtKakak" placeholder="Masukkan nama kakak" autocomplete="siblingname">
-        </label>
-
-        <label for="txtAdik"><span>Nama Adik:</span>
-        <input type="text" id="txtAdik" name="txtAdik" placeholder="Masukkan nama adik" autocomplete="siblingname">
+          <input type="text" id="txtKakak" name="txtKakak" placeholder="Masukkan nama kakak" autocomplete="siblingname">
         </label>
 
         <button type="submit">Simpan</button>
@@ -166,16 +156,16 @@ endif;
     <section id="contact">
       <h2>Kontak Kami</h2>
       <form action="proses.php" method="post">
-        <label for="txtNama"><span>Nama:</span>
-          <input type="text" id="txtNama" name="txtNama" placeholder="Masukkan nama" required autocomplete="name">
+        <label for="txtnama"><span>Nama:</span>
+          <input type="text" id="txtnama" name="txtnama" placeholder="Masukkan nama">
         </label>
 
         <label for="txtEmail"><span>Email:</span>
-          <input type="email" id="txtEmail" name="txtEmail" placeholder="Masukkan email" required autocomplete="email">
+          <input type="email" id="txtEmail" name="txtEmail" placeholder="Masukkan email" >
         </label>
 
         <label for="txtPesan"><span>Pesan Anda:</span>
-          <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan anda..." required></textarea>
+          <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan anda..." ></textarea>
           <small id="charCount">0/200 karakter</small>
         </label>
 
@@ -183,7 +173,6 @@ endif;
         <button type="submit">Kirim</button>
         <button type="reset">Batal</button>
       </form>
-
     </section>
   </main>
 
