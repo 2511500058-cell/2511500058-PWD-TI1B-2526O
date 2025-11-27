@@ -12,4 +12,5 @@ Kelompok: TI1B
 <li>hapus baris session diproses.php nomor 23-32 dan gantikan dengan kode baru</li>
 <li>hapus baris 19-67 di index.php dan diganti dengan kode baru</li>
 <li>tambahkan kode baru pada section about di index.php</li>
+<li>menghapus section about yang lama</li>
 </ol>
