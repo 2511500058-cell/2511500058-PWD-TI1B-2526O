@@ -13,4 +13,6 @@ Kelompok: TI1B
 <li>hapus baris 19-67 di index.php dan diganti dengan kode baru</li>
 <li>tambahkan kode baru pada section about di index.php</li>
 <li>menghapus section about yang lama</li>
+<li>menambahkan file fungsi.php di pertemuan-09</li>
+<li>menambahkan kode di fungsi.php</li>
 </ol>
