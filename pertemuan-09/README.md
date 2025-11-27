@@ -10,4 +10,5 @@ Kelompok: TI1B
 <li>Extract file pertemuan-09 di elearning ke lokal</li>
 <li>modif proses.php menjadi bentuk array associative<li>
 <li>hapus baris session diproses.php nomor 23-32 dan gantikan dengan kode baru</li>
+<li>hapus baris 19-67 di index.php dan diganti dengan kode baru</li>
 </ol>
