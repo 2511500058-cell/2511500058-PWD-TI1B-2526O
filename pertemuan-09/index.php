@@ -49,8 +49,8 @@ endif;
     <section id="home">
       <h2>Selamat Datang</h2>
       <?php
-      echo "halo dunia!<br>";
-      echo "nama saya hadi";
+      echo "Halo dunia!<br>";
+      echo "Nama saya M.Tio Saputra<br>";
       ?>
       <p>Ini contoh paragraf HTML.</p>
     </section>
@@ -160,7 +160,7 @@ endif;
   </main>
 
   <footer>
-    <p>&copy; 2025 Yohanes Setiawan Japriadi [0344300002]</p>
+    <p>&copy; 2025 Muhammmad Tio Saputra [2511500058]</p>
   </footer>
 
   <script src="script.js"></script>
