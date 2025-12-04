@@ -14,4 +14,5 @@ Kelompok: TI1B
 <li>buat file read.php dan tambahkan kode didalamnya</li>
 <li>mengisi cnama, cemail, dan cpesan pada phpMyAdmin</li>\
 <li>duplikat file read.php dan rename menjadi read_inc.php serta edit kode didalamnya</li>
+<li>edit file di index.php</li>
 </ol>
