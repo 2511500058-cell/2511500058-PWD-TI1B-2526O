@@ -8,5 +8,5 @@ Kelompok: TI1B
 <ol>
 
 <li>Extract file pertemuan-10 di elearning ke lokal</li>
-
+<li>membuat file koneksi.php dan menambahkan kode</li>
 </ol>
