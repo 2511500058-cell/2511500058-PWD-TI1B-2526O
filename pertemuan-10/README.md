@@ -10,4 +10,5 @@ Kelompok: TI1B
 <li>Extract file pertemuan-10 di elearning ke lokal</li>
 <li>membuat file koneksi.php dan menambahkan kode</li>
 <li>download phpMyAdmin di elearning dan buat database db_pwd2025</li>
+<li></li>
 </ol>
