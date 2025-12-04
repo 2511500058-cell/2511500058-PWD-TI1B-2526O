@@ -11,4 +11,5 @@ Kelompok: TI1B
 <li>membuat file koneksi.php dan menambahkan kode</li>
 <li>download phpMyAdmin di elearning dan buat database db_pwd2025</li>
 <li>tambahkan kode pada database db_pwd2025</li>
+<li>buat file read.php dan tambahkan kode didalamnya</li>
 </ol>
