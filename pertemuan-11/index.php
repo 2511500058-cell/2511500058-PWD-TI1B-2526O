@@ -106,7 +106,7 @@ require_once __DIR__ . '/fungsi.php';
 
     <section id="about">
       <h2>Tentang Saya</h2>
-      <?= tampilkanBiodata($fieldConfig, $biodata) ?>
+      <?= tampilkanBiodata($fieldConfig, $biodata) ?> 
     </section>
 
     <?php
@@ -137,13 +137,13 @@ require_once __DIR__ . '/fungsi.php';
         <label for="txtNama"><span>Nama:</span>
           <input type="text" id="txtNama" name="txtNama" placeholder="Masukkan nama"
           required autocomplete="name">
-          value="<?= isset($old['nama']) ? htmlspecialchars($old['nama']) : '' ?>">
+          <?= isset($old['nama']) ? htmlspecialchars($old['nama']) : '' ?>
         </label>
 
         <label for="txtEmail"><span>Email:</span>
           <input type="email" id="txtEmail" name="txtEmail" placeholder="Masukkan email"
           required autocomplete="email">
-          value="<?= isset($old['email']) ? htmlspecialchars($old['email']) : '' ?>">
+          <?= isset($old['email']) ? htmlspecialchars($old['email']) : '' ?>
         </label>
 
         <label for="txtPesan"><span>Pesan Anda:</span>
