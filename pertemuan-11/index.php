@@ -32,8 +32,8 @@ require_once __DIR__ . '/fungsi.php';
     <section id="home">
       <h2>Selamat Datang</h2>
       <?php
-      echo "halo dunia!<br>";
-      echo "nama saya hadi";
+      echo "Halo Dunia!<br>";
+      echo "Nama saya Muhammad Tio Saputra";
       ?>
       <p>Ini contoh paragraf HTML.</p>
     </section>
