@@ -18,7 +18,7 @@ function tidakKosong($str)
 function formatTanggal($tgl)
 {
   return date("d M Y", strtotime($tgl));
-}x`
+}
 
 function tampilkanBiodata($conf, $arr)
 {
