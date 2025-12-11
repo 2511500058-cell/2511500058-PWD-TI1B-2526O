@@ -12,3 +12,4 @@ Kelompok: TI1B
 <li>rewrite proses.php</li>
 <li>membuat kode pada fungsi.php</li>
 <li>memperbaiki index.php</li>
+<li>memperbaiki proses.php dan index.php lagi</li>
