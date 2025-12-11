@@ -5,6 +5,11 @@ function redirect_ke($url)
   exit();
 }
 
+function bersihkan($str)
+{
+  return htmlspecialchars(trim($str));
+}
+
 function tidakKosong($str)
 {
   return strlen(trim($str)) > 0;
@@ -13,7 +18,7 @@ function tidakKosong($str)
 function formatTanggal($tgl)
 {
   return date("d M Y", strtotime($tgl));
-}
+}x`
 
 function tampilkanBiodata($conf, $arr)
 {

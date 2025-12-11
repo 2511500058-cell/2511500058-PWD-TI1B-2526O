@@ -10,3 +10,4 @@ Kelompok: TI1B
 <li>Copy file pertemuan-10 ke pertemuan-11</li>
 <li>mengupdate index.php untuk menangkap pesan sukses, gagal, menampilkan flash message dan menambahkan isset</li>
 <li>rewrite proses.php</li>
+<li>membuat kode pada fungsi.php</li>
