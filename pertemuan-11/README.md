@@ -1,4 +1,4 @@
-# pertemuan-09
+# pertemuan-11
 
 Hari ini, Kamis 11 DES 2025, saya:<br>
 NIM: 2511500058<br>
@@ -13,3 +13,4 @@ Kelompok: TI1B
 <li>membuat kode pada fungsi.php</li>
 <li>memperbaiki index.php</li>
 <li>memperbaiki proses.php dan index.php lagi</li>
+<li>rewrite proses.php</li>
