@@ -10,6 +10,7 @@ $q = mysqli_query($conn, $sql);
         <th>Nama</th>
         <th>Email</th>
         <th>Pesan</th>
+        <th>Created At</th>
     </tr>
 
     <?php while ($row = mysqli_fetch_assoc($q)): ?>
@@ -18,6 +19,7 @@ $q = mysqli_query($conn, $sql);
             <td><?= htmlspecialchars($row['cnama']); ?></td>
             <td><?= htmlspecialchars($row['cemail']); ?></td>
             <td><?= nl2br(htmlspecialchars($row['cpesan'])); ?></td>
+            <td><?= ($row['dcreated']); ?></td>
         </tr>
     <?php endwhile; ?>
 </table>
