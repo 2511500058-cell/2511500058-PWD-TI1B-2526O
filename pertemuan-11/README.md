@@ -15,3 +15,4 @@ Kelompok: TI1B
 <li>memperbaiki proses.php dan index.php lagi</li>
 <li>rewrite proses.php</li>
 <li>membuat created at pada read.php dan read_inc.php</li>
+<li>memperbaiki kode di proses.php, read_inc.php< dan read.php</li>
