@@ -16,3 +16,4 @@ Kelompok: TI1B
 <li>rewrite proses.php</li>
 <li>membuat created at pada read.php dan read_inc.php</li>
 <li>memperbaiki kode di proses.php, read_inc.php< dan read.php</li>
+<li>menambahkan tbl_tamu.sql</li>
