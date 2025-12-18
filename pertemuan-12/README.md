@@ -11,4 +11,5 @@ Kelompok: TI1B
 <li>menambahkan tombol edit pada read.php</li>
 <li>menambahkan penampil flash sukses dan flash error</li>
 <li>buat file baru bernama edit.php</li>
+<li>menambahkan kode pada edit.php</li>
 </ol>
