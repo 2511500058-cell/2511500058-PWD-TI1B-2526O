@@ -1,1 +1,19 @@
-# pertemuan-12
+# pertemuan-11
+
+Hari ini, Kamis 11 DES 2025, saya:<br>
+NIM: 2511500058<br>
+Nama: Muhammad Tio Saputra<br>
+Kelompok: TI1B
+
+<ol>
+
+<li>Copy file pertemuan-10 ke pertemuan-11</li>
+<li>mengupdate index.php untuk menangkap pesan sukses, gagal, menampilkan flash message dan menambahkan isset</li>
+<li>rewrite proses.php</li>
+<li>membuat kode pada fungsi.php</li>
+<li>memperbaiki index.php</li>
+<li>memperbaiki proses.php dan index.php lagi</li>
+<li>rewrite proses.php</li>
+<li>membuat created at pada read.php dan read_inc.php</li>
+<li>memperbaiki kode di proses.php, read_inc.php< dan read.php</li>
+<li>menambahkan tbl_tamu.sql</li>
