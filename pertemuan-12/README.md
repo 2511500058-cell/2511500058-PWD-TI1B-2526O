@@ -12,4 +12,6 @@ Kelompok: TI1B
 <li>menambahkan penampil flash sukses dan flash error</li>
 <li>buat file baru bernama edit.php</li>
 <li>menambahkan kode pada edit.php</li>
+<li>memperbaiki kode pada read.php</li>
+<li>membuat file proses_update.php</li>
 </ol>
