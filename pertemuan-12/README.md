@@ -7,13 +7,7 @@ Kelompok: TI1B
 
 <ol>
 
-<li>Copy file pertemuan-10 ke pertemuan-11</li>
-<li>mengupdate index.php untuk menangkap pesan sukses, gagal, menampilkan flash message dan menambahkan isset</li>
-<li>rewrite proses.php</li>
-<li>membuat kode pada fungsi.php</li>
-<li>memperbaiki index.php</li>
-<li>memperbaiki proses.php dan index.php lagi</li>
-<li>rewrite proses.php</li>
-<li>membuat created at pada read.php dan read_inc.php</li>
-<li>memperbaiki kode di proses.php, read_inc.php< dan read.php</li>
-<li>menambahkan tbl_tamu.sql</li>
+<li>Copy file pertemuan-11 ke pertemuan-12</li>
+<li>menambahkan tombol edit pada read.php</li>
+<li>menambahkan penampil flash sukses dan flash error</li>
+</ol>
