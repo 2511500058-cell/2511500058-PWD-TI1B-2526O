@@ -10,4 +10,5 @@ Kelompok: TI1B
 <li>Copy file pertemuan-11 ke pertemuan-12</li>
 <li>menambahkan tombol edit pada read.php</li>
 <li>menambahkan penampil flash sukses dan flash error</li>
+<li>buat file baru bernama edit.php</li>
 </ol>
