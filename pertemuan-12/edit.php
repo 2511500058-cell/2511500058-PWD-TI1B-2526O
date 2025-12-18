@@ -87,16 +87,21 @@ if (!empty($old)) {
         value="<?= !empty($nama) ? $nama : '' ?>">
         </label>
 
-       <label for="txtNama"><span>Nama:</span>
-        <input type="text" id="txtNama" name="txtNamaEd"
-        placeholder="Masukkan Nama" required autocompleted="name"
-        value="<?= !empty($nama) ? $nama : '' ?>">
+       <label for="txtEmail"><span>Email:</span>
+        <input type="email" id="txtEmail" name="txtEmailEd"
+        placeholder="Masukkan Email" required autocompleted="email"
+        value="<?= !empty($email) ? $email : '' ?>">
         </label>
 
-        <label for="txtNama"><span>Nama:</span>
-        <input type="text" id="txtNama" name="txtNamaEd"
-        placeholder="Masukkan Nama" required autocompleted="name"
-        value="<?= !empty($nama) ? $nama : '' ?>">
+        <label for="txtPesan"><span>Pesan Anda:</span>
+        <textarea id="txtPesan" name="txtPesanEd" rows="4"
+        placeholder="Tulis pesan Anda di sini..."
+        required><?= !empty($pesan) ? $pesan : '' ?></textarea> 
+        </label>
+
+        <label for="txtCaptcha"><span>Berapa 2 + 3 ?</span>
+        <input type="number" id="txtCaptcha" name="txtCaptcha"
+        placeholder="Jawab Pertanyaan..." required>
         </label>
 
         <button type="submit">Kirim</button>
