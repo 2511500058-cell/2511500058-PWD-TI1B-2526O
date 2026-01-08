@@ -11,4 +11,4 @@ Kelompok: TI1B
 <li>menambahkan kode delete pada read.php</li>
 <li>membuat file proses_delete.php</li>
 <li>copy file proses_update.php ke proses_delete.php</li>
-<li>mengubah dan menghapus pada proses_delete.php</li>
+<li>mengubah dan menghapus kode pada proses_delete.php</li>
