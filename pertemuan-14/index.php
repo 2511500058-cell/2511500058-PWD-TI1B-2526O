@@ -32,8 +32,8 @@ require_once __DIR__ . '/fungsi.php';
     <section id="home">
       <h2>Selamat Datang</h2>
       <?php
-      echo "halo dunia!<br>";
-      echo "nama saya hadi";
+      echo "Halo Dunia!<br>";
+      echo "Nama saya Muhammad Tio Saputra";
       ?>
       <p>Ini contoh paragraf HTML.</p>
     </section>
@@ -106,60 +106,59 @@ require_once __DIR__ . '/fungsi.php';
 
     <section id="about">
       <h2>Tentang Saya</h2>
-      <?= tampilkanBiodata($fieldConfig, $biodata) ?>
+      <?= tampilkanBiodata($fieldConfig, $biodata) ?> 
     </section>
 
     <?php
-    $flash_sukses = $_SESSION['flash_sukses'] ?? ''; #jika query sukses
-    $flash_error  = $_SESSION['flash_error'] ?? ''; #jika ada error
-    $old          = $_SESSION['old'] ?? []; #untuk nilai lama form
+    $flash_sukses = $_SESSION['flash_sukses'] ?? '';
+    $flash_sukses = $_SESSION['flash_sukses'] ?? '';
+    $old = $_SESSION['old'] ?? [];
 
-    unset($_SESSION['flash_sukses'], $_SESSION['flash_error'], $_SESSION['old']); #bersihkan 3 session ini
+    unset($_SESSION['flash_sukses'], $_SESSION['flash_error'], $_SESSION['old']);
     ?>
 
     <section id="contact">
       <h2>Kontak Kami</h2>
 
       <?php if (!empty($flash_sukses)): ?>
-        <div style="padding:10px; margin-bottom:10px; background:#d4edda; color:#155724; border-radius:6px;">
+        <div style="padding: 10px; margin-bottom:10px; background:#d4edda; color:#155724; border-radius:6px;">
           <?= $flash_sukses; ?>
-        </div>
+      </div>
       <?php endif; ?>
 
       <?php if (!empty($flash_error)): ?>
-        <div style="padding:10px; margin-bottom:10px; background:#f8d7da; color:#721c24; border-radius:6px;">
+        <div style="padding: 10px; margin-bottom:10px; background:#f8d7da; color:#155724; border-radius:6px;">
           <?= $flash_error; ?>
-        </div>
+      </div>
       <?php endif; ?>
 
       <form action="proses.php" method="POST">
 
         <label for="txtNama"><span>Nama:</span>
           <input type="text" id="txtNama" name="txtNama" placeholder="Masukkan nama"
-            required autocomplete="name"
-            value="<?= isset($old['nama']) ? htmlspecialchars($old['nama']) : '' ?>">
+          required autocomplete="name">
+          <?= isset($old['nama']) ? htmlspecialchars($old['nama']) : '' ?>
         </label>
 
         <label for="txtEmail"><span>Email:</span>
           <input type="email" id="txtEmail" name="txtEmail" placeholder="Masukkan email"
-            required autocomplete="email"
-            value="<?= isset($old['email']) ? htmlspecialchars($old['email']) : '' ?>">
+          required autocomplete="email">
+          <?= isset($old['email']) ? htmlspecialchars($old['email']) : '' ?>
         </label>
 
         <label for="txtPesan"><span>Pesan Anda:</span>
           <textarea id="txtPesan" name="txtPesan" rows="4" placeholder="Tulis pesan anda..."
-            required><?= isset($old['pesan']) ? htmlspecialchars($old['pesan']) : '' ?></textarea>
+          required><?= isset($old['pesan']) ? htmlspecialchars($old['pesan']) : '' ?></textarea>
           <small id="charCount">0/200 karakter</small>
         </label>
 
-        <label for="txtCaptcha"><span>Captcha 2 + 3 = ?</span>
-          <input type="number" id="txtCaptcha" name="txtCaptcha" placeholder="Jawab Pertanyaan..."
-            required
-            value="<?= isset($old['captcha']) ? htmlspecialchars($old['captcha']) : '' ?>">
+        <label for="txtCaptcha"><span>Berapa 2 + 3 ?</span>
+        <input type="number" id="txtCaptcha" name="txtCaptcha"
+        placeholder="Jawab Pertanyaan..." required>
         </label>
 
-        <button type=" submit">Kirim</button>
-          <button type="reset">Batal</button>
+        <button type="submit">Kirim</button>
+        <button type="reset">Batal</button>
       </form>
 
       <br>
@@ -170,7 +169,7 @@ require_once __DIR__ . '/fungsi.php';
   </main>
 
   <footer>
-    <p>&copy; 2025 Yohanes Setiawan Japriadi [0344300002]</p>
+    <p>&copy; 2025 Muhammad Tio Saputra [2511500058]</p>
   </footer>
 
   <script src="script.js"></script>
