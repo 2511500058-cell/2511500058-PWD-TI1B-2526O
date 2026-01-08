@@ -8,3 +8,4 @@ Kelompok: TI1B
 <ol>
 
 <li>Copy file dari e-learning ke pertemuan-13</li>
+<li>menambahkan kode delete pada read.php</li>
