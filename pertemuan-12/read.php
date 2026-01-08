@@ -39,7 +39,7 @@ unset($_SESSION['flash_sukses'], $_SESSION['flash_error']);
         <th>Nama</th>
         <th>Email</th>
         <th>Pesan</th>
-        <th>Created at</th>
+        <th>Created at</th> 
     </tr>
 
     <?php while ($row = mysqli_fetch_assoc($q)): ?>
