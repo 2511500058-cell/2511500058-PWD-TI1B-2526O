@@ -12,3 +12,4 @@ Kelompok: TI1B
 <li>membuat file proses_delete.php</li>
 <li>copy file proses_update.php ke proses_delete.php</li>
 <li>mengubah dan menghapus kode pada proses_delete.php</li>
+<li>menambahkan paramater cid untuk link delete di read.php</li>
