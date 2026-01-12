@@ -32,8 +32,8 @@ require_once __DIR__ . '/fungsi.php';
     <section id="home">
       <h2>Selamat Datang</h2>
       <?php
-      echo "halo dunia!<br>";
-      echo "nama saya hadi";
+      echo "Halo Dunia!<br>";
+      echo "Nama Saya Muhammad Tio Saputra<br>";
       ?>
       <p>Ini contoh paragraf HTML.</p>
     </section>
@@ -201,7 +201,7 @@ require_once __DIR__ . '/fungsi.php';
   </main>
 
   <footer>
-    <p>&copy; 2025 Yohanes Setiawan Japriadi [0344300002]</p>
+    <p>&copy; 2025 Muhammad Tio Saputra [2511500058]</p>
   </footer>
 
   <script src="script.js"></script>
