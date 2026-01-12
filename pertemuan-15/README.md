@@ -10,3 +10,4 @@ Kelompok: TI1B
 <li>Copy file try out UAS dari e-learning ke pertemuan-15</li>
 <li>membuat tabel baru biodata mahasiswa</li>
 <li>mengupdate proses.php untuk insert ke tabel baru dengan validasi, sanitasi, dan PRG</li>
+<li>mengupdate read.php supaya menampilkan hasil record biodata sederhana mahasiswa</li>
