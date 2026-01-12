@@ -186,7 +186,7 @@ unset($_SESSION['flash_sukses'], $_SESSION['flash_error'], $_SESSION['old_bio'])
 <body>
 
 <h1>Edit Biodata Mahasiswa</h1>
-<a href="read.php">Kembali ke Halaman Admin</a>
+<a href="read.php">Kembali ke Halaman Semua Data</a>
 
 <?php if (!empty($flash_sukses)): ?>
     <div class="alert alert-success"><?= htmlspecialchars($flash_sukses); ?></div>
@@ -263,7 +263,7 @@ unset($_SESSION['flash_sukses'], $_SESSION['flash_error'], $_SESSION['old_bio'])
     ];
 
     foreach ($fieldConfig as $key => $label) {
-        $value = $bio[str_replace(['nama', 'tempat', 'tanggal', 'hobi', 'pasangan', 'pekerjaan', 'ortu', 'kakak', 'adik'], ['cnama', 'ctempat_lahir', 'dtanggal_lahir', 'chobi', 'cpasangan', 'cpekerjaan', 'cnama_ortu', 'cnama_kakak', 'cnama_adik'], $key)] ?? '';
+        $value = $bio[str_replace(['nim', 'nama', 'tempat', 'tanggal', 'hobi', 'pasangan', 'pekerjaan', 'ortu', 'kakak', 'adik'], ['cnim', 'cnama', 'ctempat_lahir', 'dtanggal_lahir', 'chobi', 'cpasangan', 'cpekerjaan', 'cnama_ortu', 'cnama_kakak', 'cnama_adik'], $key)] ?? '';
         echo "<p><strong>$label:</strong> " . htmlspecialchars($value) . "</p>";
     }
     ?>
