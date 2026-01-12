@@ -85,7 +85,7 @@ if (!empty($errors)) {
         'nama_adik'     => $nama_adik,
     ];
     $_SESSION['flash_error'] = implode('<br>', $errors);
-    redirect_ke('edit.php?bid=' . (int)$bid);
+    redirect_ke('edit_biodatamhs.php?bid=' . (int)$bid);
 }
 
 /* update ke database */
@@ -104,7 +104,7 @@ $sql = "UPDATE tbl_biodatamhs SET
 $stmt = mysqli_prepare($conn, $sql);
 if (!$stmt) {
     $_SESSION['flash_error'] = 'Terjadi kesalahan sistem (prepare gagal).';
-    redirect_ke('edit.php?bid=' . (int)$bid);
+    redirect_ke('edit_biodatamhs.php?bid=' . (int)$bid);
 }
 
 mysqli_stmt_bind_param(
