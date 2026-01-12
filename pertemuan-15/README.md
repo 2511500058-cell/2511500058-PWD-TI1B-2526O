@@ -11,3 +11,5 @@ Kelompok: TI1B
 <li>membuat tabel baru biodata mahasiswa</li>
 <li>mengupdate proses.php untuk insert ke tabel baru dengan validasi, sanitasi, dan PRG</li>
 <li>mengupdate read.php supaya menampilkan hasil record biodata sederhana mahasiswa</li>
+<li>membuat file proses_update_biodatamhs.php</li>
+<li>mengisi kode pada file proses_update_biodatamhs.php</li>

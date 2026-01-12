@@ -58,7 +58,7 @@ if ($isBiodata) {
         redirect_ke("index.php#biodata");
     }
 
-    $sql  = "INSERT INTO Tbl_biodata_mhs
+    $sql  = "INSERT INTO tbl_biodata_mhs
              (Nim, Nm_lengkap, T4_lahir, Tgl_lahir, Hobi, Pasangan, Pekerjaan, Nm_ortu, Nm_kakak, Nm_adik)
              VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
     $stmt = mysqli_prepare($conn, $sql);
@@ -98,7 +98,7 @@ if ($isBiodata) {
         ];
         $_SESSION["biodata"]      = $arrBiodata;
         $_SESSION["flash_sukses"] = "Biodata berhasil disimpan.";
-        redirect_ke("index.php#about");
+        redirect_ke("index.php#biodata");
     } else {
         $_SESSION["old"] = [
             "nim"      => $nim,

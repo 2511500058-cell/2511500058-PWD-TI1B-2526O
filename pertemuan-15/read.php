@@ -21,14 +21,14 @@ if (!$qTamu) {
 #--------------------------------------------------
 # DATA TABEL BIODATA SEDERHANA MAHASISWA 
 #--------------------------------------------------
-$sqlBio = "SELECT * FROM Tblbiodata_mhs ORDER BY id DESC";
+$sqlBio = "SELECT * FROM tbl_biodata_mhs ORDER BY Nim DESC";
 $qBio   = mysqli_query($conn, $sqlBio);
 if (!$qBio) {
     die("Query error (biodata): " . mysqli_error($conn));
 }
 ?>
 <!DOCTYPE html>
-<html lang="id">
+<html lang="nim">
 <head>
     <meta charset="UTF-8">
     <title>Data Tamu Dan Biodata Sederhana Mahasiswa</title>
@@ -40,7 +40,7 @@ if (!$qBio) {
 </header>
 
 <main>
-<section id="flash">
+<section nim="flash">
     <?php if (!empty($flash_sukses)) : ?>
         <div style="padding:10px;margin-bottom:10px;background:#d4edda;color:#155724;border-radius:6px;">
             <?= $flash_sukses ?>
@@ -57,13 +57,13 @@ if (!$qBio) {
 <!-- ==========================================
      1. TABEL BUKU TAMU
      ========================================== -->
-<section id="tamu">
+<section nim="tamu">
     <h2>Data Buku Tamu</h2>
     <table border="1" cellpadding="8" cellspacing="0">
         <tr>
             <th>No</th>
             <th>Aksi</th>
-            <th>ID</th>
+            <th>NIM</th>
             <th>Nama</th>
             <th>Email</th>
             <th>Pesan</th>
@@ -94,13 +94,13 @@ if (!$qBio) {
 <!-- ==========================================
      2. TABEL BIODATA MAHASISWA
      ========================================== -->
-<section id="biodata-list">
+<section nim="biodata-list">
     <h2>Data Biodata Mahasiswa</h2>
     <table border="1" cellpadding="8" cellspacing="0">
         <tr>
             <th>No</th>
             <th>Aksi</th>
-            <th>ID</th>
+            <th>NIM</th>
             <th>NIM</th>
             <th>Nama Lengkap</th>
             <th>Tempat Lahir</th>
@@ -119,12 +119,12 @@ if (!$qBio) {
         <tr>
             <td><?= $j++ ?></td>
             <td>
-                <a href="edit_biodata.php?id=<?= (int)$row["id"] ?>">Edit</a>
+                <a href="edit_biodata.php?nim=<?= (int)$row["nim"] ?>">Edit</a>
                 |
-                <a href="proses_delete_biodata.php?id=<?= (int)$row["id"] ?>"
+                <a href="proses_delete_biodata.php?nim=<?= (int)$row["nim"] ?>"
                    onclick="return confirm('Ingin hapus biodata ini?')">Delete</a>
             </td>
-            <td><?= $row["id"] ?></td>
+            <td><?= $row["nim"] ?></td>
             <td><?= htmlspecialchars($row["nim"]) ?></td>
             <td><?= htmlspecialchars($row["nama_lengkap"]) ?></td>
             <td><?= htmlspecialchars($row["tempat_lahir"]) ?></td>
