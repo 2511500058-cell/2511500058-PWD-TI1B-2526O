@@ -13,3 +13,5 @@ Kelompok: TI1B
 <li>mengupdate read.php supaya menampilkan hasil record biodata sederhana mahasiswa</li>
 <li>membuat file proses_update_biodatamhs.php</li>
 <li>mengisi kode pada file proses_update_biodatamhs.php</li>
+<li>membuat file edit_biodatamhs.php</li>
+<li>mengisi kode pada file edit_biodatamhs.php</li>

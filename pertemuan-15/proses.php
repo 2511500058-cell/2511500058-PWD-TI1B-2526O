@@ -3,6 +3,8 @@ session_start();
 require "koneksi.php";
 require_once "fungsi.php";
 
+
+
 #------------------------------------------------------
 # DETEKSI: FORM BIODATA atau FORM KONTAK
 #------------------------------------------------------
@@ -11,7 +13,7 @@ $isBiodata = isset($_POST["txtNim"]);
 #------------------------------------------------------
 # 1. FORM BIODATA MAHASISWA
 #------------------------------------------------------
-if ($isBiodata) {
+if (isset($_POST['submit_biodata'])) {
 
     $nim = bersihkan($_POST["txtNim"] ?? "");
     $nama = bersihkan($_POST["txtNmLengkap"] ?? "");
@@ -19,48 +21,48 @@ if ($isBiodata) {
     $tanggal = bersihkan($_POST["txtTglLhr"] ?? "");
     $hobi = bersihkan($_POST["txtHobi"] ?? "");
     $pasangan = bersihkan($_POST["txtPasangan"] ?? "");
-    $pekerjaan = bersihkan($_POST["txtKerja"] ?? "");
+    $kerja = bersihkan($_POST["txtKerja"] ?? "");
     $ortu = bersihkan($_POST["txtNmOrtu"] ?? "");
     $kakak = bersihkan($_POST["txtNmKakak"] ?? "");
     $adik = bersihkan($_POST["txtNmAdik"] ?? "");
 
     $errors = [];
 
-    if ($nim === "") $errors[] = "NIM harus di isi!";
-    if ($nama === "") $errors[] = "Nama Lengkap harus di isi!";
-    if ($tempat === "") $errors[] = "Tempat Lahir harus di isi!";
-    if ($tanggal === "") $errors[] = "Tanggal Lahir harus di isi!";
-    if ($hobi === "") $errors[] = "Hobi harus di isi!";
+    if ($nim === "")      $errors[] = "NIM harus di isi!";
+    if ($nama === "")     $errors[] = "Nama Lengkap harus di isi!";
+    if ($tempat === "")   $errors[] = "Tempat Lahir harus di isi!";
+    if ($tanggal === "")  $errors[] = "Tanggal Lahir harus di isi!";
+    if ($hobi === "")     $errors[] = "Hobi harus di isi!";
     if ($pasangan === "") $errors[] = "Pasangan harus di isi!";
-    if ($pekerjaan === "") $errors[] = "Pekerjaan harus di isi!";
-    if ($ortu === "") $errors[] = "Nama Orang Tua harus di isi!";
-    if ($kakak === "") $errors[] = "Nama Kakak harus di isi!";
-    if ($adik === "") $errors[] = "Nama Adik harus di isi!";
+    if ($kerja === "")    $errors[] = "Pekerjaan harus di isi!";
+    if ($ortu === "")     $errors[] = "Nama Orang Tua harus di isi!";
+    if ($kakak === "")    $errors[] = "Nama Kakak harus di isi!";
+    if ($adik === "")     $errors[] = "Nama Adik harus di isi!";
 
-    if (mb_strlen($nim) < 10) {
-        $errors[] = "NIM minimal 10 karakter.";
+    if (mb_strlen($nim) < 3) {
+        $errors[] = "NIM minimal 3 karakter.";
     }
 
     if (!empty($errors)) {
         $_SESSION["old"] = [
-            "nim"      => $nim,
-            "nama"     => $nama,
-            "tempat"   => $tempat,
-            "tanggal"  => $tanggal,
-            "hobi"     => $hobi,
+            "nim" => $nim,
+            "nama" => $nama,
+            "tempat" => $tempat,
+            "tanggal" => $tanggal,
+            "hobi" => $hobi,
             "pasangan" => $pasangan,
-            "pekerjaan" => $pekerjaan,
-            "ortu"     => $ortu,
-            "kakak"    => $kakak,
-            "adik"     => $adik,
+            "kerja" => $kerja,
+            "ortu" => $ortu,
+            "kakak" => $kakak,
+            "adik" => $adik,
         ];
-        $_SESSION["flash_error"] = implode ("<br>", $errors);
+        $_SESSION["flash_error"] = implode("<br>", $errors);
         redirect_ke("index.php#biodata");
     }
 
-    $sql  = "INSERT INTO tbl_biodata_mhs
-             (Nim, Nm_lengkap, T4_lahir, Tgl_lahir, Hobi, Pasangan, Pekerjaan, Nm_ortu, Nm_kakak, Nm_adik)
-             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    $sql  = "INSERT INTO tbl_biodatamhs
+             (cnim, cnama, ctempat, dtanggal, chobi, cpasangan, cpekerjaan, cnama_ortu, cnama_kakak, cnama_adik, dcreated_at)
+             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, NOW())";
     $stmt = mysqli_prepare($conn, $sql);
     if (!$stmt) {
         $_SESSION["flash_error"] = "Terjadi kesalahan sistem (prepare gagal).";
@@ -69,13 +71,14 @@ if ($isBiodata) {
 
     mysqli_stmt_bind_param(
         $stmt,
+        "ssssssssssi",
         $nim,
         $nama,
         $tempat,
         $tanggal,
         $hobi,
         $pasangan,
-        $pekerjaan,
+        $kerja,
         $ortu,
         $kakak,
         $adik
@@ -91,28 +94,28 @@ if ($isBiodata) {
             "tanggal" => $tanggal,
             "hobi" => $hobi,
             "pasangan" => $pasangan,
-            "pekerjaan" => $pekerjaan,
+            "pekerjaan" => $kerja,
             "ortu" => $ortu,
             "kakak" => $kakak,
             "adik" => $adik,
         ];
-        $_SESSION["biodata"]      = $arrBiodata;
+        $_SESSION["biodata"] = $arrBiodata;
         $_SESSION["flash_sukses"] = "Biodata berhasil disimpan.";
         redirect_ke("index.php#biodata");
     } else {
         $_SESSION["old"] = [
-            "nim"      => $nim,
-            "nama"     => $nama,
-            "tempat"   => $tempat,
-            "tanggal"  => $tanggal,
-            "hobi"     => $hobi,
+            "nim" => $nim,
+            "nama" => $nama,
+            "tempat" => $tempat,
+            "tanggal" => $tanggal,
+            "hobi" => $hobi,
             "pasangan" => $pasangan,
-            "pekerjaan" => $pekerjaan,
-            "ortu"     => $ortu,
-            "kakak"    => $kakak,
-            "adik"     => $adik,
+            "kerja" => $kerja,
+            "ortu" => $ortu,
+            "kakak" => $kakak,
+            "adik" => $adik,
         ];
-        $_SESSION["flash_error"] = "Biodata Mahasiswa gagal disimpan. Silakan coba lagi.";
+        $_SESSION["flash_error"] = "Biodata gagal disimpan. Silakan coba lagi.";
         redirect_ke("index.php#biodata");
     }
 
@@ -129,6 +132,9 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     redirect_ke("index.php#contact");
 }
 
+elseif (isset($_POST['submit_kontak']) || isset($_POST['txtEmail'])) {
+}
+
 $nama    = bersihkan($_POST["txtNama"]   ?? "");
 $email   = bersihkan($_POST["txtEmail"]  ?? "");
 $pesan   = bersihkan($_POST["txtPesan"]  ?? "");
@@ -137,21 +143,21 @@ $captcha = bersihkan($_POST["txtCaptcha"]?? "");
 $errors = [];
 
 if ($nama === "") {
-    $errors[] = "Nama harus di isi!.";
+    $errors[] = "Nama harus di isi!";
 }
 
 if ($email === "") {
-    $errors[] = "Email harus di isi!.";
+    $errors[] = "Email harus di isi!";
 } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     $errors[] = "Format e-mail tidak valid.";
 }
 
 if ($pesan === "") {
-    $errors[] = "Pesan harus di isi!.";
+    $errors[] = "Pesan harus di isi!";
 }
 
 if ($captcha === "") {
-    $errors[] = "Pertanyaan harus di isi!.";
+    $errors[] = "Pertanyaan harus di isi!";
 }
 
 if (mb_strlen($nama) < 3) {

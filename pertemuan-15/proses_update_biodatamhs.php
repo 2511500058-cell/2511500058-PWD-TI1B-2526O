@@ -9,106 +9,139 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     redirect_ke('read.php');
 }
 
-/* validasi id */
-$nim = filter_input(INPUT_POST, 'Nim', FILTER_VALIDATE_INT, [
+/* validasi bid */
+$bid = filter_input(INPUT_POST, 'bid', FILTER_VALIDATE_INT, [
     'options' => ['min_range' => 1]
 ]);
 
-if (!$nim) {
+if (!$bid) {
     $_SESSION['flash_error'] = 'ID Tidak Valid.';
     redirect_ke('read.php');
 }
 
 /* ambil & sanitasi */
-$nim = bersihkan($_POST["txtNim"] ?? "");
-    $nama = bersihkan($_POST["txtNmLengkap"] ?? "");
-    $tempat = bersihkan($_POST["txtT4Lhr"] ?? "");
-    $tanggal = bersihkan($_POST["txtTglLhr"] ?? "");
-    $hobi = bersihkan($_POST["txtHobi"] ?? "");
-    $pasangan = bersihkan($_POST["txtPasangan"] ?? "");
-    $pekerjaan = bersihkan($_POST["txtKerja"] ?? "");
-    $ortu = bersihkan($_POST["txtNmOrtu"] ?? "");
-    $kakak = bersihkan($_POST["txtNmKakak"] ?? "");
-    $adik = bersihkan($_POST["txtNmAdik"] ?? "");
+$nim = bersihkan($_POST['txtNim'] ?? '');
+$nama_lengkap = bersihkan($_POST['txtNamaLengkap'] ?? '');
+$tempat_lahir = bersihkan($_POST['txtTempatLahir'] ?? '');
+$tanggal_lahir = bersihkan($_POST['txtTanggalLahir'] ?? '');
+$hobi = bersihkan($_POST['txtHobi'] ?? '');
+$pasangan = bersihkan($_POST['txtPasangan'] ?? '');
+$pekerjaan = bersihkan($_POST['txtPekerjaan'] ?? '');
+$nama_ortu = bersihkan($_POST['txtNamaOrtu'] ?? '');
+$nama_kakak = bersihkan($_POST['txtNamaKakak'] ?? '');
+$nama_adik = bersihkan($_POST['txtNamaAdik'] ?? '');
 
+/* validasi sederhana */
 $errors = [];
 
-if ($nama === '')     $errors[] = 'Nama Lengkap harus di isi!';
-if ($tempat === '')   $errors[] = 'Tempat Lahir harus di isi!';
-if ($tanggal === '')  $errors[] = 'Tanggal Lahir harus di isi!';
-if ($hobi === '')     $errors[] = 'Hobi harus di isi!';
-if ($pasangan === '') $errors[] = 'Pasangan harus di isi!';
-if ($kerja === '')    $errors[] = 'Pekerjaan harus di isi!';
-if ($ortu === '')     $errors[] = 'Nama Orang Tua harus di isi!';
-if ($kakak === '')    $errors[] = 'Nama Kakak harus di isi!';
-if ($adik === '')     $errors[] = 'Nama Adik harus di isi!';
-
-if (mb_strlen($nama) < 3) {
-    $errors[] = 'Nama minimal 3 karakter.';
+if ($nim === '') {
+    $errors[] = 'NIM harus di isi!';
+}
+if ($nama_lengkap === '') {
+    $errors[] = 'Nama Lengkap harus di isi!';
+}
+if ($tempat_lahir === '') {
+    $errors[] = 'Tempat Lahir harus di isi!';
+}
+if ($tanggal_lahir === '') {
+    $errors[] = 'Tanggal Lahir harus di isi!';
+}
+if ($hobi === '') {
+    $errors[] = 'Hobi harus di isi!';
+}
+if ($pasangan === '') {
+    $errors[] = 'Pasangan harus di isi!';
+}
+if ($pekerjaan === '') {
+    $errors[] = 'Pekerjaan harus di isi!';
+}
+if ($nama_ortu === '') {
+    $errors[] = 'Nama Orang Tua harus di isi!';
+}
+if ($nama_kakak === '') {
+    $errors[] = 'Nama Kakak harus di isi!';
+}
+if ($nama_adik === '') {
+    $errors[] = 'Nama Adik harus di isi!';
+}
+if (mb_strlen($nim) < 3) {
+    $errors[] = 'NIM minimal 3 karakter.';
 }
 
+/* jika ada error */
 if (!empty($errors)) {
+
+
     $_SESSION['old'] = [
-        'nama'     => $nama,
-        'tempat'   => $tempat,
-        'tanggal'  => $tanggal,
-        'hobi'     => $hobi,
-        'pasangan' => $pasangan,
-        'kerja'    => $kerja,
-        'ortu'     => $ortu,
-        'kakak'    => $kakak,
-        'adik'     => $adik,
+        'nim'           => $nim,
+        'nama_lengkap'  => $nama_lengkap,
+        'tempat_lahir'  => $tempat_lahir,
+        'tanggal_lahir' => $tanggal_lahir,
+        'hobi'          => $hobi,
+        'pasangan'      => $pasangan,
+        'pekerjaan'     => $pekerjaan,
+        'nama_ortu'     => $nama_ortu,
+        'nama_kakak'    => $nama_kakak,
+        'nama_adik'     => $nama_adik,
     ];
-    $_SESSION['flash_error'] = implode('', $errors);
-    redirect_ke('edit_biodata.php?Nim=' . (int)$Nim);
+    $_SESSION['flash_error'] = implode('<br>', $errors);
+    redirect_ke('edit.php?bid=' . (int)$bid);
 }
 
-/* UPDATE prepared statement */
-$stmt = mysqli_prepare(
-    $conn,
-    "UPDATE tblbiodata_mhs
-     SET nama_lengkap = ?, tempat_lahir = ?, tanggal_lahir = ?,
-         hobi = ?, pasangan = ?, pekerjaan = ?, nama_ortu = ?,
-         nama_kakak = ?, nama_adik = ?
-     WHERE Nim = ?"
-);
-
+/* update ke database */
+$sql = "UPDATE tbl_biodatamhs SET
+        cnim = ?, 
+        cnama = ?, 
+        ctempat = ?, 
+        dtanggal = ?, 
+        chobi = ?, 
+        cpasangan = ?, 
+        cpekerjaan = ?, 
+        cnama_ortu = ?, 
+        cnama_kakak = ?, 
+        cnama_adik = ?
+        WHERE bid = ?";
+$stmt = mysqli_prepare($conn, $sql);
 if (!$stmt) {
     $_SESSION['flash_error'] = 'Terjadi kesalahan sistem (prepare gagal).';
-    redirect_ke('edit_biodata.php?Nim=' . (int)$Nim);
+    redirect_ke('edit.php?bid=' . (int)$bid);
 }
 
 mysqli_stmt_bind_param(
     $stmt,
-    $nama,
-    $tempat,
-    $tanggal,
+    "ssssssssssi",
+    $nim,
+    $nama_lengkap,
+    $tempat_lahir,
+    $tanggal_lahir,
     $hobi,
     $pasangan,
-    $kerja,
-    $ortu,
-    $kakak,
-    $adik,
+    $pekerjaan,
+    $nama_ortu,
+    $nama_kakak,
+    $nama_adik,
+    $bid
 );
 
 if (mysqli_stmt_execute($stmt)) {
     unset($_SESSION['old']);
-    $_SESSION['flash_sukses'] = 'Data biodata sudah diperbaharui.';
-    redirect_ke('read.php');  // PRG: kembali ke file pembaca
+    $_SESSION['flash_sukses'] = 'Biodata berhasil diperbarui!';
+    redirect_ke('read.php');
 } else {
     $_SESSION['old'] = [
-        'nama'     => $nama,
-        'tempat'   => $tempat,
-        'tanggal'  => $tanggal,
-        'hobi'     => $hobi,
-        'pasangan' => $pasangan,
-        'kerja'    => $kerja,
-        'ortu'     => $ortu,
-        'kakak'    => $kakak,
-        'adik'     => $adik,
+        'nim'           => $nim,
+        'nama_lengkap'  => $nama_lengkap,
+        'tempat_lahir'  => $tempat_lahir,
+        'tanggal_lahir' => $tanggal_lahir,
+        'hobi'          => $hobi,
+        'pasangan'      => $pasangan,
+        'pekerjaan'     => $pekerjaan,
+        'nama_ortu'     => $nama_ortu,
+        'nama_kakak'    => $nama_kakak,
+        'nama_adik'     => $nama_adik,
     ];
-    $_SESSION['flash_error'] = 'Data biodata gagal diperbaharui. Silakan coba lagi.';
-    redirect_ke('edit_biodata.php?Nim=' . (int)$Nim);
+    $_SESSION['flash_error'] = 'Biodata gagal diperbarui. Silakan coba lagi.';
+    redirect_ke('edit.biodatamhs.php?bid=' . (int)$bid);
 }
 
 mysqli_stmt_close($stmt);

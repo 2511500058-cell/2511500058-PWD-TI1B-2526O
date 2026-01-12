@@ -19,16 +19,16 @@ if (!$qTamu) {
 }
 
 #--------------------------------------------------
-# DATA TABEL BIODATA SEDERHANA MAHASISWA 
+# DATA TABEL BIODATA SEDERHANA MAHASISWA
 #--------------------------------------------------
-$sqlBio = "SELECT * FROM tbl_biodata_mhs ORDER BY Nim DESC";
+$sqlBio = "SELECT * FROM tbl_biodatamhs ORDER BY bid DESC";
 $qBio   = mysqli_query($conn, $sqlBio);
 if (!$qBio) {
     die("Query error (biodata): " . mysqli_error($conn));
 }
 ?>
 <!DOCTYPE html>
-<html lang="nim">
+<html lang="bid">
 <head>
     <meta charset="UTF-8">
     <title>Data Tamu Dan Biodata Sederhana Mahasiswa</title>
@@ -40,7 +40,7 @@ if (!$qBio) {
 </header>
 
 <main>
-<section nim="flash">
+<section bid="flash">
     <?php if (!empty($flash_sukses)) : ?>
         <div style="padding:10px;margin-bottom:10px;background:#d4edda;color:#155724;border-radius:6px;">
             <?= $flash_sukses ?>
@@ -57,13 +57,13 @@ if (!$qBio) {
 <!-- ==========================================
      1. TABEL BUKU TAMU
      ========================================== -->
-<section nim="tamu">
+<section bid="tamu">
     <h2>Data Buku Tamu</h2>
     <table border="1" cellpadding="8" cellspacing="0">
         <tr>
             <th>No</th>
             <th>Aksi</th>
-            <th>NIM</th>
+            <th>BID</th>
             <th>Nama</th>
             <th>Email</th>
             <th>Pesan</th>
@@ -94,13 +94,13 @@ if (!$qBio) {
 <!-- ==========================================
      2. TABEL BIODATA MAHASISWA
      ========================================== -->
-<section nim="biodata-list">
-    <h2>Data Biodata Mahasiswa</h2>
+<section bid="biodata">
+    <h2>Biodata Mahasiswa</h2>
     <table border="1" cellpadding="8" cellspacing="0">
         <tr>
             <th>No</th>
             <th>Aksi</th>
-            <th>NIM</th>
+            <th>ID</th>
             <th>NIM</th>
             <th>Nama Lengkap</th>
             <th>Tempat Lahir</th>
@@ -111,6 +111,7 @@ if (!$qBio) {
             <th>Nama Ortu</th>
             <th>Nama Kakak</th>
             <th>Nama Adik</th>
+            <th>Created At</th>
         </tr>
         <?php
         $j = 1;
@@ -119,12 +120,12 @@ if (!$qBio) {
         <tr>
             <td><?= $j++ ?></td>
             <td>
-                <a href="edit_biodata.php?nim=<?= (int)$row["nim"] ?>">Edit</a>
+                <a href="edit.php?bid=<?= (int)$row["bid"] ?>">Edit</a>
                 |
-                <a href="proses_delete_biodata.php?nim=<?= (int)$row["nim"] ?>"
+                <a href="proses_delete.php?bid=<?= (int)$row["bid"] ?>"
                    onclick="return confirm('Ingin hapus biodata ini?')">Delete</a>
             </td>
-            <td><?= $row["nim"] ?></td>
+            <td><?= $row["bid"] ?></td>
             <td><?= htmlspecialchars($row["nim"]) ?></td>
             <td><?= htmlspecialchars($row["nama_lengkap"]) ?></td>
             <td><?= htmlspecialchars($row["tempat_lahir"]) ?></td>
@@ -135,6 +136,8 @@ if (!$qBio) {
             <td><?= htmlspecialchars($row["nama_ortu"]) ?></td>
             <td><?= htmlspecialchars($row["nama_kakak"]) ?></td>
             <td><?= htmlspecialchars($row["nama_adik"]) ?></td>
+            <td><?= formatTanggal(htmlspecialchars($row["created_at"])) ?></td>
+        </tr>
         <?php endwhile; ?>
     </table>
 </section>
