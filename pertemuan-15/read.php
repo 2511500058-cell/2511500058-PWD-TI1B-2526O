@@ -232,7 +232,7 @@
         <tr>
           <td><?= $j++ ?></td>
           <td>
-            <a href="edit_biodata.php?bid=<?= htmlspecialchars($bio['bid']); ?>">Edit</a> | 
+            <a href="edit_biodatamhs.php?bid=<?= htmlspecialchars($bio['bid']); ?>">Edit</a> | 
             <a class="delete-link" onclick="return confirm('Hapus Biodata <?= htmlspecialchars($bio['cnama']); ?>?')" href="proses_delete_biodata.php?bid=<?= htmlspecialchars($bio['bid']); ?>">Hapus</a>
           </td>
           <td><?= htmlspecialchars($bio['bid']); ?></td>
