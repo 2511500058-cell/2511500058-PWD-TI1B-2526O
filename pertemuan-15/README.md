@@ -17,3 +17,4 @@ Kelompok: TI1B
 <li>mengisi kode pada file edit_biodatamhs.php</li>
 <li>membuat file proses_delete_biodatamhs.php</li>
 <li>mengisi kode pada file proses_delete_biodatamhs.php</li>
+<li>mengupdate file proses_update.php untuk kembali ke read.php saat selesai diedit</li>
