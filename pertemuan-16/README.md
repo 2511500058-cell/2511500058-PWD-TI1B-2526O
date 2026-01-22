@@ -9,3 +9,4 @@ Kelompok: TI1B
 
 <li>Copy file dari pertemuan-13 ke pertemuan-16</li>
 <li>membuat tabel baru pengunjung</li>
+<li>mengupdate proses.php untuk insert ke tabel baru dengan validasi, sanitasi, dan PRG</li>
