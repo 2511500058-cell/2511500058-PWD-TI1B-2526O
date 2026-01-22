@@ -13,3 +13,4 @@ Kelompok: TI1B
 <li>mengupdate read.php agar menampilkan hasil record data biodata pengunjung</li>
 <li>membuat file proses_update_pengunjung.php</li>
 <li>membuat file edit.php dan mengisi kodenya</li>
+<li>membuat file proses_delete.php dan mengisi kodenya</li>
