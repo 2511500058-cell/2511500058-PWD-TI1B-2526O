@@ -8,3 +8,4 @@ Kelompok: TI1B
 <ol>
 
 <li>Copy file dari pertemuan-13 ke pertemuan-16</li>
+<li>membuat tabel baru pengunjung</li>
