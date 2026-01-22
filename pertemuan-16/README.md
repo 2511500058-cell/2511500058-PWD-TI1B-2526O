@@ -18,3 +18,4 @@ Kelompok: TI1B
 <li>membuat file edit_biodatapengunjung.php</li>
 <li>mengisi kode pada file edit_biodatapengunjung.php</li>
 <li>membuat file proses_delete_biodatpengunjung.php</li>
+<li>mengisi kode pada file proses_delete_biodatamhs.php</li>
