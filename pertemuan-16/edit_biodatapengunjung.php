@@ -135,7 +135,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 // Jika GET, ambil data dari database untuk form
-$sql = "SELECT * FROM tbl_biodatapengunjung WHERE pid = ?";
+$sql = "SELECT * FROM tbl_pengunjung WHERE pid = ?";
 $stmt = mysqli_prepare($conn, $sql);
 if ($stmt) {
     mysqli_stmt_bind_param($stmt, "i", $pid);
