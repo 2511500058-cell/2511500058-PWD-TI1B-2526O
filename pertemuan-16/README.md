@@ -7,4 +7,4 @@ Kelompok: TI1B
 
 <ol>
 
-<li>Copy file dari e-learning ke pertemuan-13</li>
+<li>Copy file dari pertemuan-13 ke pertemuan-16</li>
