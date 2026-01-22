@@ -85,7 +85,7 @@ if (!empty($errors)) {
         'nama_adik'     => $nama_adik,
     ];
     $_SESSION['flash_error'] = implode('<br>', $errors);
-    redirect_ke('edit_biodatapengunjung.php?pid=' . (int)$bid);
+    redirect_ke('edit_biodatapengunjung.php?pid=' . (int)$pid);
 }
 
 /* update ke database */
@@ -100,11 +100,11 @@ $sql = "UPDATE tbl_pengunjung SET
         cnama_ortu = ?, 
         cnama_kakak = ?, 
         cnama_adik = ?
-        WHERE bid = ?";
+        WHERE pid = ?";
 $stmt = mysqli_prepare($conn, $sql);
 if (!$stmt) {
     $_SESSION['flash_error'] = 'Terjadi kesalahan sistem (prepare gagal).';
-    redirect_ke('edit_biodatapengunjung.php?pid=' . (int)$bid);
+    redirect_ke('edit_biodatapengunjung.php?pid=' . (int)$pid);
 }
 
 mysqli_stmt_bind_param(
@@ -120,7 +120,7 @@ mysqli_stmt_bind_param(
     $nama_ortu,
     $nama_kakak,
     $nama_adik,
-    $bid
+    $pid
 );
 
 if (mysqli_stmt_execute($stmt)) {
@@ -141,7 +141,7 @@ if (mysqli_stmt_execute($stmt)) {
         'nama_adik'     => $nama_adik,
     ];
     $_SESSION['flash_error'] = 'Biodata gagal diperbarui. Silakan coba lagi.';
-    redirect_ke('edit_biodatapengunjung.php?pid=' . (int)$bid);
+    redirect_ke('edit_biodatapengunjung.php?pid=' . (int)$pid);
 }
 
 mysqli_stmt_close($stmt);
