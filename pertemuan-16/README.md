@@ -12,4 +12,4 @@ Kelompok: TI1B
 <li>mengupdate proses.php untuk insert ke tabel baru dengan validasi, sanitasi, dan PRG</li>
 <li>mengupdate read.php agar menampilkan hasil record data biodata pengunjung</li>
 <li>membuat file proses_update_pengunjung.php</li>
-<li>membuat file edit.php</li>
+<li>membuat file edit.php dan mengisi kodenya</li>
