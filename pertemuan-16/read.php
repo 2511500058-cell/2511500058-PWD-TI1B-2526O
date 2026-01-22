@@ -232,8 +232,8 @@
         <tr>
           <td><?= $j++ ?></td>
           <td>
-            <a href="edit_biodatamhs.php?pid=<?= htmlspecialchars($bio['pid']); ?>">Edit</a> | 
-            <a class="delete-link" onclick="return confirm('Hapus Biodata <?= htmlspecialchars($bio['cnama']); ?>?')" href="proses_delete_biodatamhs.php?pid=<?= htmlspecialchars($bio['pid']); ?>">Hapus</a>
+            <a href="edit_biodatapengunjung.php?pid=<?= htmlspecialchars($bio['pid']); ?>">Edit</a> | 
+            <a class="delete-link" onclick="return confirm('Hapus Biodata <?= htmlspecialchars($bio['cnama']); ?>?')" href="proses_delete_biodatapengunjung.php?pid=<?= htmlspecialchars($bio['pid']); ?>">Hapus</a>
           </td>
           <td><?= htmlspecialchars($bio['pid']); ?></td>
           <td><?= htmlspecialchars($bio['cnim']); ?></td>
