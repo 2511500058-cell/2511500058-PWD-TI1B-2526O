@@ -14,3 +14,4 @@ Kelompok: TI1B
 <li>membuat file proses_update_pengunjung.php</li>
 <li>membuat file edit.php dan mengisi kodenya</li>
 <li>membuat file proses_delete.php dan mengisi kodenya</li>
+<li>mengisi kode pada file proses_update_pengunjung.php</li>
