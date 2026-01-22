@@ -21,3 +21,5 @@ Kelompok: TI1B
 <li>mengisi kode pada file proses_delete_biodatapengunjung.php</li>
 <li>membuat file proses_update.php dan mengisi kode</li>
 <li>memperbarui read.php</li>
+<li>memperbarui read.php</li>
+<li>menaruh file sql</li>
